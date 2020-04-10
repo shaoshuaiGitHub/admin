@@ -20,11 +20,25 @@
       "unicode_decimal": 58955
     },
     {
+      "icon_id": "2536722",
+      "name": "系统配置",
+      "font_class": "xitongP",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
       "icon_id": "2944834",
       "name": "系统管理",
       "font_class": "xitong1",
       "unicode": "e614",
       "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "4923099",
+      "name": "消息管理",
+      "font_class": "xiaoxi",
+      "unicode": "e659",
+      "unicode_decimal": 58969
     },
     {
       "icon_id": "5539758",
@@ -88,6 +102,13 @@
       "font_class": "shangpin",
       "unicode": "e75a",
       "unicode_decimal": 59226
+    },
+    {
+      "icon_id": "9306961",
+      "name": "文档管理",
+      "font_class": "wendang",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
     },
     {
       "icon_id": "10287990",

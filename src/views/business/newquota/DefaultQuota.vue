@@ -46,6 +46,7 @@
                 :columns="columns"
                 :rowKey="record => record.dfId"
                 @change="handleTableChange"
+                :scroll="{x:700}"
               >
                 <template slot="quotaPer" slot-scope="text, record">
                   <a-input-number

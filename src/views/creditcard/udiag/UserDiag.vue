@@ -34,6 +34,7 @@
             </a-form-item>
             <a-form-item>
               <a-button type="primary" html-type="submit">搜索</a-button>
+              <a-button :style="{marginLeft:'10px'}" @click="resetSearch">重置</a-button>
             </a-form-item>
           </a-form>
         </div>
@@ -46,10 +47,8 @@
           :columns="columns"
           :rowKey="record => record.rid"
           @change="handleTableChange"
+          :scroll="{x:600}"
         >
-        <template slot="content" slot-scope="text,record">
-             <span @click="()=>contentDetail(record.rid,text)" class="col-sql">内容详情</span>
-        </template>
         </a-table>
       </a-layout-content>
     </div>
@@ -93,12 +92,6 @@ const columns = [
     dataIndex: "diagTime",
     scopedSlots: { customRender: "createTime" }
   },
-  {
-    title: "诊断内容",
-    // width: "18%",
-    dataIndex: "content",
-    scopedSlots: { customRender: "content" }
-  }
 ];
 export default {
   data() {
@@ -164,15 +157,10 @@ export default {
       //获取日志列表
       this.getTableList();
     },
-     contentDetail(id, record) {
-      // 关联银行展示
-      let that = this;
-      that.$modal.info({
-        centered: true,
-        title:  "诊断内容",
-        content: record,
-        
-      });
+    //重置搜索
+    resetSearch() {
+      this.searchform.resetFields();
+      this._userDiagPage();
     },
     searchSubmit(e) {
       //搜索
@@ -197,13 +185,5 @@ export default {
 .editable-row-operations a {
   margin-right: 8px;
 }
-.col-sql {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: inline-block;
-  width: 200px;
-  cursor: pointer;
-  color: #faad14;
-}
+
 </style>

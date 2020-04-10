@@ -19,8 +19,12 @@
       <a-layout-content
         :style="{ margin: '24px 0', padding: '24px', background: '#fff', minHeight: '280px' }"
       >
-        <div :style="{marginBottom:'20px'}">
+        <div
+          class="headButton"
+          :style="{display:'flex',flexDirection:'row',justifyContent:'space-between',marginBottom:'20px'}"
+        >
           <a-button type="primary" icon="rollback" @click="back">返回</a-button>
+          <a-button type="primary" icon="plus" @click="addModal">新增提示语</a-button>
         </div>
         <a-table
           bordered
@@ -30,6 +34,7 @@
           :columns="columns"
           :dataSource="data"
           :rowKey="record => record.parameterId"
+          :scroll="{x:650}"
         >
           <template slot="name">
             <span>{{name}}</span>
@@ -69,12 +74,37 @@
         </a-table>
         <a-button type="primary" :style="{ margin: '0 0 10px 0 ' }" @click="saveall">保存修改</a-button>
       </a-layout-content>
+      <a-modal
+        centered
+        title="新增提示语"
+        :visible="addservice.visible"
+        :confirmLoading="addservice.confirmLoading"
+        @cancel="serviceCancel"
+        :footer="null"
+      >
+        <a-form :form="serviceaddform" @submit="addserviceSubmit">
+          <a-form-item label="提示名称" :label-col="{ span: 5 }" :wrapper-col="{ span: 8 }">
+            <a-input v-decorator="['parameterName']" />
+          </a-form-item>
+          <a-form-item label="提示内容" :label-col="{ span: 5 }" :wrapper-col="{ span: 8 }">
+            <a-input v-decorator="['parameterTitle']" />
+          </a-form-item>
+          <a-form-item label="是否必填" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
+            <a-select style="width:100px;" v-decorator="['isMust']">
+              <a-select-option :value="1">是</a-select-option>
+              <a-select-option :value="0">否</a-select-option>
+            </a-select>
+          </a-form-item>
+          <a-form-item :wrapper-col="{ span: 12, offset: 6 }">
+            <a-button type="primary" html-type="submit">保存</a-button>
+          </a-form-item>
+        </a-form>
+      </a-modal>
     </div>
-    
   </div>
 </template>
 <script>
-import { parameter, updateParameter, deleteParameter } from "api";
+import { parameter, updateParameter, deleteParameter, addParameter } from "api";
 import { match } from "minimatch";
 const columns = [
   {
@@ -118,15 +148,16 @@ export default {
       confirmLoading: false,
       tableLoading: true,
       selectValue: ["否", "是"],
+      addservice: {
+        //新增页面属性
+        visible: false,
+        confirmLoading: true
+      },
+      serviceaddform: this.$form.createForm(this), //新增form表单创建
       pagination: {
         total: 30,
         defaultCurrent: 0,
         defaultPageSize: 10
-        // showSizeChanger: true,
-        // pageSizeOptions: ["5", "10", "15", "20"],
-        // onShowSizeChange: (current, pageSize) => (this.pageSize = pageSize),
-        // showQuickJumper: true,
-        // onChange: (page, pageSize) => self.changePage(page, pageSize), //点击页码事件
       },
       name: this.$route.params.name
     };
@@ -172,10 +203,8 @@ export default {
       //保存修改
       const newData = [...this.data];
       const target = newData.filter(item => true === item.editable);
-      console.log(target);
       for (var i = 0; i < target.length; i++) {
         updateParameter({
-          bankId: this.$route.params.id,
           parameterId: target[i].parameterId,
           parameterName: target[i].parameterName,
           parameterTitle: target[i].parameterTitle,
@@ -187,13 +216,60 @@ export default {
             setTimeout(() => {
               this.tableLoading = false;
             }, 200);
-            delete target[i].editable;
           }
         });
+        delete target[i].editable;
       }
-       if(target.length == 0){
-          this.data = newData;
+      if (target.length == 0) {
+        this.data = newData;
       }
+    },
+    addModal() {
+      //新增按钮
+      this.addservice.visible = true;
+    },
+    addserviceSubmit(e) {
+      // 新增提交按钮
+      let that = this;
+      e.preventDefault();
+      that.serviceaddform.validateFields((err, values) => {
+        let formData = {};
+        formData.bankId = that.$route.params.id;
+        formData.parameterName = values.parameterName;
+        formData.parameterTitle = values.parameterTitle;
+        formData.isMust = values.isMust;
+        if (!err) {
+          addParameter(formData).then(res => {
+            if (res.code) {
+              that.$message.success(res.msg);
+              that.addservice.visible = false;
+              that._parameter();
+              that.serviceaddform.resetFields();
+            }
+          });
+        }
+      });
+    },
+    serviceCancel() {
+      //新增页面撤销
+      this.addservice.visible = false;
+    },
+
+    deletes(id) {
+      //删除事件
+      let that = this;
+      this.delID = id;
+      that.$modal.confirm({
+        centered: true,
+        title: "请确定",
+        content: "确定删除该配置？",
+        cancelText: "取消",
+        okText: "确定",
+        onOk() {
+          that.handleOk();
+        },
+        onCancel() {}
+      });
     },
     handleOk() {
       //确定删除
@@ -211,23 +287,6 @@ export default {
         }
       });
     },
-    deletes(id) {
-      //删除事件
-      let that = this;
-      this.delID = id;
-      that.$modal.confirm({
-        centered: true,
-        title: "请确定",
-        content: "确定删除该配置？",
-        cancelText: "取消",
-        okText: "确定",
-        onOk() {
-          that.handleOk();
-        },
-        onCancel() {}
-      });
-    },
-   
     back() {
       this.$router.back();
     }

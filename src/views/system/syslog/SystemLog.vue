@@ -40,6 +40,7 @@
             </a-form-item>
             <a-form-item>
               <a-button type="primary" html-type="submit">搜索</a-button>
+              <a-button :style="{marginLeft:'10px'}" @click="resetSearch">重置</a-button>
             </a-form-item>
           </a-form>
         </div>
@@ -51,6 +52,7 @@
           :dataSource="data"
           :columns="columns"
           :rowKey="record => record.lid"
+          :scroll="{x:590}"
         ></a-table>
       </a-layout-content>
     </div>
@@ -142,6 +144,11 @@ export default {
           that.tableLoading = false;
         }, 200);
       });
+    },
+    //重置搜索
+    resetSearch() {
+      this.searchform.resetFields();
+      this._logPage();
     },
     searchSubmit(e) {
       //搜索

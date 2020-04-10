@@ -20,7 +20,7 @@
       >
         <div
           class="headButton"
-          :style="{display:'flex',flexDirection:'row',justifyContent:'space-between',marginBottom:'50px'}"
+          :style="{display:'flex',flexDirection:'row',justifyContent:'space-between',marginBottom:'20px'}"
         >
           <a-form layout="inline" :form="searchform" @submit="searchSubmit">
             <a-form-item>
@@ -31,52 +31,63 @@
                 </a-select>
               </a-input>
             </a-form-item>
-            <a-form-item label="商品名称" :label-col="{ span: 9 }" :wrapper-col="{ span: 10 }">
+            <a-form-item label="商品名称" >
               <a-input v-decorator="['goodsName']"></a-input>
             </a-form-item>
-            <a-form-item label="服务状态">
-              <a-select style="width:100px;" v-decorator="['sStatus']">
-                <a-select-option value="0">停用</a-select-option>
-                <a-select-option value="1">启用</a-select-option>
-                <a-select-option value="null">全部</a-select-option>
-              </a-select>
-            </a-form-item>
-            <a-form-item label="订单类型">
-              <a-select style="width:100px;" v-decorator="['goodsType']">
-                <a-select-option value="1">VIP订单</a-select-option>
-                <a-select-option value="2">实物订单</a-select-option>
-                <a-select-option value="3">应用订单</a-select-option>
-                <a-select-option value="4">信用点订单</a-select-option>
-                <a-select-option value="null">全部</a-select-option>
-              </a-select>
-            </a-form-item>
-            <a-form-item label="注册时间">
-              <a-date-picker
-                :disabledDate="disabledStartDate"
-                format="YYYY-MM-DD"
-                placeholder="开始日期"
-                @change="date => dateChangeStart(date)"
-                @openChange="handleStartOpenChange"
-                v-decorator="['startValue']"
-              />~
-              <a-form-item>
-                <a-date-picker
-                  :disabledDate="disabledEndDate"
-                  format="YYYY-MM-DD"
-                  placeholder="结束日期"
-                  @change="date => dateChangeEnd(date)"
-                  :open="endOpen"
-                  @openChange="handleEndOpenChange"
-                  v-decorator="['endValue']"
-                />
-              </a-form-item>
-            </a-form-item>
+            <a-row v-if="isCollapse">
+              <a-col>
+                <a-form-item label="服务状态">
+                  <a-select style="width:150px;" v-decorator="['sStatus']">
+                    <a-select-option value="1">停用</a-select-option>
+                    <a-select-option value="0">启用</a-select-option>
+                    <a-select-option value="null">全部</a-select-option>
+                  </a-select>
+                </a-form-item>
+                <a-form-item label="订单类型">
+                  <a-select style="width:150px;" v-decorator="['goodsType']">
+                    <a-select-option value="1">VIP订单</a-select-option>
+                    <a-select-option value="2">实物订单</a-select-option>
+                    <a-select-option value="3">应用订单</a-select-option>
+                    <a-select-option value="4">信用点订单</a-select-option>
+                    <a-select-option value="null">全部</a-select-option>
+                  </a-select>
+                </a-form-item>
+              </a-col>
+              <a-col>
+                <a-form-item label="注册时间">
+                  <a-date-picker
+                    :disabledDate="disabledStartDate"
+                    format="YYYY-MM-DD"
+                    placeholder="开始日期"
+                    @change="date => dateChangeStart(date)"
+                    @openChange="handleStartOpenChange"
+                    v-decorator="['startValue']"
+                  />&nbsp;~
+                  <a-form-item>
+                    <a-date-picker
+                      :disabledDate="disabledEndDate"
+                      format="YYYY-MM-DD"
+                      placeholder="结束日期"
+                      @change="date => dateChangeEnd(date)"
+                      :open="endOpen"
+                      @openChange="handleEndOpenChange"
+                      v-decorator="['endValue']"
+                    />
+                  </a-form-item>
+                </a-form-item>
+              </a-col>
+            </a-row>
             <a-form-item>
-              <a-button type="primary" html-type="submit">搜索</a-button>
+              <a-button type="primary" html-type="submit">查询</a-button>
+              <a-button :style="{marginLeft:'10px'}" @click="resetSearch">重置</a-button>
+              <span style="margin-left:10px;cursor: pointer; color:#1899ff;" @click="openSearch">
+                {{isCollapse ? '收起':'展开'}}
+                <a-icon style="margin-left:3px;" :type="isCollapse ? 'up':'down'" />
+              </span>
             </a-form-item>
           </a-form>
         </div>
-        <div :style="{display:'flex',flexDirection:'row',justifyContent:'flex-end'}">
+        <div :style="{display:'flex',flexDirection:'row',justifyContent:'flex-start'}">
           <a-button type="primary" style="margin-right:50px" @click="saveall">保存修改</a-button>
           <a-button
             type="primary"
@@ -94,6 +105,7 @@
           :columns="columns"
           :rowKey="record => record.sid"
           @change="handleTableChange"
+          :scroll="{x:800}"
         >
           <template v-for="col in ['createTime', 'endTime']" :slot="col" slot-scope="text, record">
             <div :key="col">
@@ -109,7 +121,7 @@
             <a-switch
               checkedChildren="启用"
               unCheckedChildren="停用"
-              :defaultChecked="text === 1"
+              :defaultChecked="text === 0"
               @change="() => stopbution( record.sid,record.sStatus)"
             />
           </template>
@@ -209,7 +221,10 @@ const columns = [
     title: "开始时间",
     // width: "18%",
     dataIndex: "createTime",
-    scopedSlots: { customRender: "createTime" }
+    scopedSlots: { customRender: "createTime" },
+     sorter: (a, b) =>
+      moment(a.createTime).format("YYYY-MM-DD HH:mm:ss") >
+      moment(b.createTime).format("YYYY-MM-DD HH:mm:ss")
   },
   {
     title: "结束时间",
@@ -221,11 +236,13 @@ const columns = [
     title: "排序(越小越靠前)",
     // width: "18%",
     dataIndex: "goodsSort",
-    scopedSlots: { customRender: "goodsSort" }
+    scopedSlots: { customRender: "goodsSort" },
+     sorter: (a, b) =>
+      a.goodsSort - b.goodsSort
   },
   {
     title: "会员增值服务状态",
-    // width: "18%",
+    width: "10%",
     dataIndex: "sStatus",
     scopedSlots: { customRender: "sStatus" }
   }
@@ -234,6 +251,7 @@ export default {
   data() {
     let self = this;
     return {
+      isCollapse: false,
       data: [],
       cacheData: [],
       columns,
@@ -320,7 +338,7 @@ export default {
       });
     },
     _findAddServicePage() {
-      //获取会员商品列表
+      //获取vip会员信息列表
       this.getTableList();
     },
     // 时间范围模块
@@ -351,6 +369,15 @@ export default {
     },
     handleEndOpenChange(open) {
       this.endOpen = open;
+    },
+    //重置搜索
+    resetSearch() {
+      this.searchform.resetFields();
+      this._findAddServicePage();
+    },
+    // 搜索框展开
+    openSearch() {
+      this.isCollapse = !this.isCollapse;
     },
     searchSubmit(e) {
       //搜索
@@ -403,9 +430,9 @@ export default {
         ); //转换时间格式
         values.endTime = moment(values.endTime).format("YYYY-MM-DD HH:mm:ss");
         if (values.sStatus) {
-          values.sStatus = 1;
-        } else {
           values.sStatus = 0;
+        } else {
+          values.sStatus = 1;
         }
         const target = that.goodData.filter(
           item => values.goodsId == item.goodsId
@@ -445,7 +472,7 @@ export default {
 
       updateAddServiceBySid(formData).then(res => {
         if (res.code) {
-          status === 1
+          status === 0
             ? that.$message.success("已经启用了该账号")
             : that.$message.success("已经停用了该账号");
           target.sStatus = status;

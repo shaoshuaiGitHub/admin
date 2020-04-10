@@ -48,6 +48,7 @@
                 :columns="columns"
                 :rowKey="record => record.rid"
                 @change="handleTableChange"
+                :scroll="{x:500}"
               >
                 <template slot="moneyPer" slot-scope="text, record">
                   <a-input-number

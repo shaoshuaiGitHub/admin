@@ -37,11 +37,12 @@
           </a-form-item>
           <a-form-item>
             <a-button type="primary" html-type="submit">搜索</a-button>
+            <a-button :style="{marginLeft:'10px'}" @click="resetSearch">重置</a-button>
           </a-form-item>
         </a-form>
         <div
           class="pages-list-table-list"
-          :style="{marginTop:'10px',display:'flex',flexDirection:'row',justifyContent:'flex-end'}"
+          :style="{marginTop:'10px',display:'flex',flexDirection:'row',justifyContent:'flex-start'}"
         >
           <a-button type="primary" icon="form" @click="addModal">新增用户</a-button>
         </div>
@@ -53,6 +54,7 @@
           :columns="columns"
           :dataSource="data"
           :rowKey="record => record.adminId"
+          :scroll="{x:690}"
         >
           <template slot="userName" slot-scope="text">{{text}}</template>
           <template slot="roleId" slot-scope="text">{{filterRole(text)}}</template>
@@ -478,7 +480,11 @@ export default {
       //退出新增界面
       this.adduser.visible = false;
     },
-
+    //重置搜索
+    resetSearch() {
+      this.searchform.resetFields();
+      this._adminlist();
+    },
     searchSubmit(e) {
       //搜索
       this.queryParam = this.firstParam;

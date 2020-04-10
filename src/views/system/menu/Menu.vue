@@ -8,6 +8,9 @@
             <a-breadcrumb-item>系统管理</a-breadcrumb-item>
             <a-breadcrumb-item>菜单管理</a-breadcrumb-item>
           </a-breadcrumb>
+           <div class="ant-page-header-heading">
+            <span class="ant-page-header-heading-title">轮播图管理</span>
+          </div>
         </div>
       </div>
     </div>
@@ -31,6 +34,7 @@
           :rowKey="record => record.resourceId"
           :defaultExpandAllRows="true"
           :indentSize="50"
+          :scroll="{x:1130}"
         >
           <template v-for="col in ['key','url','icon']" :slot="col" slot-scope="text, record">
             <a-input
@@ -190,14 +194,10 @@ export default {
       tableLoading: true,
       // datetypeData,
       pagination: {
-        total: 30,
+        total: 0,
         defaultCurrent: 0,
-        defaultPageSize: 10
-        // showSizeChanger: true,
-        // pageSizeOptions: ["5", "10", "15", "20"],
-        // onShowSizeChange: (current, pageSize) => (this.pageSize = pageSize),
-        // showQuickJumper: true,
-        // onChange: (page, pageSize) => self.changePage(page, pageSize), //点击页码事件
+        defaultPageSize: 10,
+        showTotal: total => `共 ${total} 条数据`,
       },
       name: this.$route.params.name,
       menuaddform: this.$form.createForm(this)
@@ -206,7 +206,6 @@ export default {
   created() {
     this._postResource();
   },
-
   methods: {
     _postResource() {
       //获取菜单列表
@@ -242,6 +241,7 @@ export default {
               that.$message.success(res.msg);
               that._postResource();
               that.menuuser.visible = false;
+              that.menuaddform.resetFields();
             }
           });
         }
@@ -322,10 +322,7 @@ export default {
         }
       });
     },
-    handleCancel() {
-      //取消删除
-      this.visible = false;
-    },
+
 
     back() {
       this.$router.back();

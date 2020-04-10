@@ -2,7 +2,7 @@
   <a-layout-content
     :style="{ margin: '24px 0', padding: '24px', background: '#fff', minHeight: '280px' }"
   >
-    <div class="headButton" :style="{display:'flex',flexDirection:'row',justifyContent:'flex-end'}">
+    <div class="headButton" :style="{display:'flex',flexDirection:'row',justifyContent:'flex-start'}">
       <div class="pages-list-table-list" style="margin-top:15px">
         <a-button type="primary" icon="form" @click="addModal">新增配置</a-button>
       </div>
@@ -14,6 +14,7 @@
       :pagination="pagination"
       :rowKey="record => record.basicsId"
       @change="handleTableChange"
+      :scroll="{x:620}"
     >
       <template
         v-for="col in ['quotaPercent', 'commissionPercent','availableTurnoverPercent']"
@@ -486,7 +487,8 @@ export default {
       that.$modal.info({
         centered: true,
         title: record.basicsRuleName + "-关联银行",
-        content: that.showBank(bankLists)
+        content: that.showBank(bankLists),
+        maskClosable:true,
       });
     },
     deletes(id) {

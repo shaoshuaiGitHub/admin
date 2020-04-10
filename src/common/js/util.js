@@ -23,11 +23,43 @@ const onchange = function(value, id, column, data, idType) {
     }
     return data;
 }
-const a = function() {
-    console.log("this is a")
+
+const setContextData = function(key, value) {
+    if (typeof value == "string") {
+        sessionStorage.setItem(key, value);
+    } else {
+        sessionStorage.setItem(key, JSON.stringify(value));
+    }
+}
+
+// 从sessionStorage取值
+const getContextData = function(key) {
+    const str = sessionStorage.getItem(key);
+    if (typeof str == "string") {
+        try {
+            return JSON.parse(str);
+        } catch (e) {
+            return str;
+        }
+    }
+    return;
+}
+
+const removeContextData = function(key) {
+    const str = sessionStorage.removeItem(key);
+    if (typeof str == "string") {
+        try {
+            return JSON.parse(str);
+        } catch (e) {
+            return str;
+        }
+    }
+    return;
 }
 
 export {
     onchange,
-    a
+    setContextData,
+    getContextData,
+    removeContextData
 }

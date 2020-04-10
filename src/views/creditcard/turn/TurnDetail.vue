@@ -18,38 +18,39 @@
       <a-layout-content
         :style="{ margin: '24px 0', padding: '24px', background: '#fff', minHeight: '280px' }"
       >
-      <!-- 顶部数据 -->
+        <!-- 顶部数据 -->
         <a-button type="primary" icon="left" @click="back">返回</a-button>
         <div class="tongji">
-          <div class="tongji-box">
-            卡数(
-            <span class="mean-number">{{planInfo.totalInfo ? planInfo.totalInfo.cardNumber : ''}}</span>)张
-          </div>
-          <div class="tongji-box">
-            总额度(
+          <a-icon type="exclamation-circle" style="color:#1899ff;font-size:15px;" theme="filled" />
+          <span class="tongji-box">
+            卡数:
+            <span class="mean-number">{{planInfo.totalInfo ? planInfo.totalInfo.cardNumber : 0}}</span>(张)
+          </span>
+          <span class="tongji-box">
+            总额度:
             <span
               class="mean-number"
-            >{{planInfo.totalInfo ? planInfo.totalInfo.totalQuota : ''}}</span>)元
-          </div>
-          <div class="tongji-box">
-            总可用额度(
+            >{{planInfo.totalInfo ? planInfo.totalInfo.totalQuota : ''}}</span>(元)
+          </span>
+          <span class="tongji-box">
+            总可用额度:
             <span
               class="mean-number"
-            >{{planInfo.totalInfo? planInfo.totalInfo.totalQuota : ''}}</span>)元
-          </div>
-          <div class="tongji-box">
-            长期可用剩余(
+            >{{planInfo.totalInfo? planInfo.totalInfo.totalQuota : ''}}</span>(元)
+          </span>
+          <span class="tongji-box">
+            长期可用剩余:
             <span
               class="mean-number"
-            >{{planInfo.totalInfo ? planInfo.totalInfo.totalQuota : ''}}</span>)元
-          </div>
+            >{{planInfo.totalInfo ? planInfo.totalInfo.totalQuota : ''}}</span>(元)
+          </span>
 
-          <div class="tongji-box">
-            需预留周转(
+          <span class="tongji-box">
+            需预留周转:
             <span
               class="mean-number"
-            >{{planInfo.totalInfo ? planInfo.totalInfo.totalQuota : ''}}</span>)元
-          </div>
+            >{{planInfo.totalInfo ? planInfo.totalInfo.totalQuota : ''}}</span>(元)
+          </span>
         </div>
         <!-- 主表格部分 -->
         <a-table
@@ -60,15 +61,13 @@
           :rowKey="record => record.card.cid"
           @change="handleTableChange"
           :bordered="true"
+          :scroll="{x:700}"
         >
           <template
             slot="cardNumber"
             slot-scope="text,record"
           >{{record.card.tbank.bankName+'（'+text.substring(text.length-4,text.length)+'）'}}</template>
-          <template
-            slot="billDateStr"
-            slot-scope="text"
-          >{{'每月'+text+'日'}}</template>
+          <template slot="billDateStr" slot-scope="text">{{'每月'+text+'日'}}</template>
           <template slot="repayDate" slot-scope="text">{{'每月'+text+'日'}}</template>
           <template slot="paystatus" slot-scope="text">
             <template v-if="text == 1">
@@ -102,7 +101,7 @@
         @cancel="statusCancel"
         :footer="null"
       >
-      <!-- 弹窗内周转信息表格 -->
+        <!-- 弹窗内周转信息表格 -->
         <a-table
           :columns="secondColumns"
           :dataSource="secondData"
@@ -209,11 +208,11 @@ const columns = [
     scopedSlots: { customRender: "cardNumber" }
   },
   {
-    title: "信用额度",
+    title: "信用额度（元）",
     dataIndex: "card.quota"
   },
   {
-    title: "可用额度",
+    title: "可用额度（元）",
     dataIndex: "card.availableQuota"
   },
   {
@@ -227,7 +226,7 @@ const columns = [
     scopedSlots: { customRender: "repayDate" }
   },
   {
-    title: "账单金额",
+    title: "账单金额（元）",
     dataIndex: "card.newBill.totalMoney"
   },
   {
@@ -253,7 +252,7 @@ const secondColumns = [
     scopedSlots: { customRender: "planType" }
   },
   {
-    title: "计划金额",
+    title: "计划金额（元）",
     dataIndex: "planMoney"
   },
   {
@@ -269,7 +268,7 @@ const secondColumns = [
 ];
 const innerColumns = [
   {
-    title: "单笔金额",
+    title: "单笔金额（元）",
     dataIndex: "planMoney"
   },
   {
@@ -284,24 +283,26 @@ export default {
     return {
       tableLoading: true,
       innerloading: false,
-      data: [],//首页表格数据
-      secondData: [],//周转弹窗表格数据
-      innerData: [],//周转弹窗子表格数据
-      expandedRowKeys: [],//周转弹窗表格展开行key
-      planInfo: [],//周转计划信息
+      data: [], //首页表格数据
+      secondData: [], //周转弹窗表格数据
+      innerData: [], //周转弹窗子表格数据
+      expandedRowKeys: [], //周转弹窗表格展开行key
+      planInfo: [], //周转计划信息
       columns,
       secondColumns,
       innerColumns,
-      status: { //周转弹窗属性
+      status: {
+        //周转弹窗属性
         visible: false,
         confirmLoading: true
       },
-      modify: {//分笔表单弹窗属性
+      modify: {
+        //分笔表单弹窗属性
         visible: false,
         confirmLoading: true
       },
       editValue: "",
-      nMsg: "",//主表格提示内容
+      nMsg: "", //主表格提示内容
       statusValue: {},
       visible: false,
       confirmLoading: false,
@@ -354,8 +355,12 @@ export default {
           const pagination = { ...that.pagination };
           pagination.total = res.data.total;
           that.pagination = pagination;
-          that.data = res.data.list[0].planData ? res.data.list[0].planData.content : [];
-          that.planInfo = res.data.list[0].planData ? res.data.list[0].planData : {};
+          that.data = res.data.list[0].planData
+            ? res.data.list[0].planData.content
+            : [];
+          that.planInfo = res.data.list[0].planData
+            ? res.data.list[0].planData
+            : {};
           setTimeout(() => {
             that.tableLoading = false;
           }, 200);
@@ -376,12 +381,12 @@ export default {
       this.status.visible = true;
       this.statusId = id;
     },
-     statusCancel() {
-         //关闭周转详情弹窗
+    statusCancel() {
+      //关闭周转详情弹窗
       this.status.visible = false;
     },
     expand(expanded, record) {
-        //展开行事件
+      //展开行事件
       this.expandedRowKeys = [];
       if (expanded) {
         this.expandedRowKeys = [record.planId];
@@ -426,7 +431,7 @@ export default {
       this.modify.visible = true;
     },
     modifySubmit(e) {
-        //分笔表单提交
+      //分笔表单提交
       let that = this;
       let target = that.secondData.filter(
         item => that.editId == item.planId
@@ -451,11 +456,11 @@ export default {
       });
     },
     modifyCancel() {
-        //关闭分笔表单
+      //关闭分笔表单
       this.modify.visible = false;
     },
     back() {
-        //返回上一页
+      //返回上一页
       this.$router.back();
     }
   }
@@ -475,7 +480,7 @@ export default {
   color: #faad14;
 }
 .biaoji {
-    font-size: 15px;
+  font-size: 15px;
   color: #faad14;
 }
 .wancheng {
@@ -488,20 +493,20 @@ export default {
 }
 .tongji {
   margin: 20px 0;
-  padding: 20px;
-  border: 0.5px dotted #faad14;
+  padding: 10px 15px 8px 15px;
+  border: 1px solid #91d5ff;
+  background-color: #e6f7ff;
   border-radius: 5px;
 }
+
 .tongji-box {
-  display: inline;
-  font-size: 16px;
-  margin: 0 20px;
-  padding: 10px;
-  border: 0.5px solid rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
+  font-size: 15px;
+  margin-right: 12px;
+  color: rgba(0, 0, 0, 0.65);
 }
 .mean-number {
-  color: #f5222d;
+  color: #1899ff;
+  font-weight: 600;
 }
 .deletes {
   color: #f5222d;

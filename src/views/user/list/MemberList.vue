@@ -25,7 +25,7 @@
           <a-form layout="inline" :form="searchform" @submit="searchSubmit">
             <!-- 搜索框 -->
             <a-form-item>
-              <a-input v-decorator="['inValue']" placeholder="输入条件" style="width:200px">
+              <a-input v-decorator="['inValue']" placeholder="输入条件" style="width:300px">
                 <a-select v-decorator="['selKey',{initialValue: 'userName'}]" slot="addonBefore">
                   <a-select-option value="userName">会员名</a-select-option>
                   <a-select-option value="phone">手机号</a-select-option>
@@ -33,48 +33,59 @@
                 </a-select>
               </a-input>
             </a-form-item>
-            <a-form-item label="推荐人手机号" :label-col="{ span: 9 }" :wrapper-col="{ span: 10 }">
+            <a-form-item label="推荐人手机号">
               <a-input v-decorator="['upUserPhone']"></a-input>
             </a-form-item>
-            <a-form-item label="状态">
-              <a-select style="width:100px;" v-decorator="['statu']">
-                <a-select-option value="0">停用</a-select-option>
-                <a-select-option value="1">启用</a-select-option>
-                <a-select-option value="null">全部</a-select-option>
-              </a-select>
-            </a-form-item>
-            <a-form-item label="会员类型">
-              <a-select style="width:100px;" v-decorator="['vtype']">
-                <a-select-option value="1">初级vip</a-select-option>
-                <a-select-option value="2">中级vip</a-select-option>
-                <a-select-option value="3">高级vip</a-select-option>
-                <a-select-option value="4">至尊vip</a-select-option>
-                <a-select-option value="null">全部</a-select-option>
-              </a-select>
-            </a-form-item>
-            <a-form-item label="注册时间">
-              <a-date-picker
-                :disabledDate="disabledStartDate"
-                format="YYYY-MM-DD"
-                placeholder="开始日期"
-                @change="date => dateChangeStart(date)"
-                @openChange="handleStartOpenChange"
-                v-decorator="['startValue']"
-              /> ~
-              <a-form-item>
-                <a-date-picker
-                  :disabledDate="disabledEndDate"
-                  format="YYYY-MM-DD"
-                  placeholder="结束日期"
-                  @change="date => dateChangeEnd(date)"
-                  :open="endOpen"
-                  @openChange="handleEndOpenChange"
-                  v-decorator="['endValue']"
-                />
-              </a-form-item>
-            </a-form-item>
+            <a-row v-if="isCollapse">
+              <a-col>
+                <a-form-item label="会员类型">
+                  <a-select style="width:150px;" v-decorator="['vtype']">
+                    <a-select-option value="1">初级vip</a-select-option>
+                    <a-select-option value="2">中级vip</a-select-option>
+                    <a-select-option value="3">高级vip</a-select-option>
+                    <a-select-option value="4">至尊vip</a-select-option>
+                    <a-select-option value="null">全部</a-select-option>
+                  </a-select>
+                </a-form-item>
+                <a-form-item label="状态">
+                  <a-select style="width:150px;" v-decorator="['statu']">
+                    <a-select-option value="0">停用</a-select-option>
+                    <a-select-option value="1">启用</a-select-option>
+                    <a-select-option value="null">全部</a-select-option>
+                  </a-select>
+                </a-form-item>
+              </a-col>
+              <a-col>
+                <a-form-item label="注册时间">
+                  <a-date-picker
+                    :disabledDate="disabledStartDate"
+                    format="YYYY-MM-DD"
+                    placeholder="开始日期"
+                    @change="date => dateChangeStart(date)"
+                    @openChange="handleStartOpenChange"
+                    v-decorator="['startValue']"
+                  />&nbsp;~
+                  <a-form-item>
+                    <a-date-picker
+                      :disabledDate="disabledEndDate"
+                      format="YYYY-MM-DD"
+                      placeholder="结束日期"
+                      @change="date => dateChangeEnd(date)"
+                      :open="endOpen"
+                      @openChange="handleEndOpenChange"
+                      v-decorator="['endValue']"
+                    />
+                  </a-form-item>
+                </a-form-item>
+              </a-col>
+            </a-row>
             <a-form-item>
-              <a-button type="primary" html-type="submit">搜索</a-button>
+              <a-button type="primary" html-type="submit">查询</a-button>
+              <a-button :style="{marginLeft:'10px'}" @click="resetSearch">重置</a-button>
+              <span style="margin-left:10px;cursor: pointer; color:#1899ff;" @click="openSearch">
+                {{isCollapse ? '收起':'展开'}}
+                <a-icon style="margin-left:3px;" :type="isCollapse ? 'up':'down'" />
+              </span>
             </a-form-item>
           </a-form>
         </div>
@@ -85,10 +96,16 @@
           :pagination="pagination"
           :rowKey="record => record.uid"
           @change="handleTableChange"
+          :scroll="{x:800}"
         >
           <template slot="vtype" slot-scope="text">{{typeFilter(text)}}</template>
           <template slot="headPic" slot-scope="text">
-            <img :src="text" alt="未找到图片" :style="{width:'50px',height:'50px'}" />
+            <img
+              :src="text"
+              alt="未找到图片"
+              :style="{width:'50px',height:'50px'}"
+              @click="() => imgClick(text)"
+            />
           </template>
           <template slot="statu" slot-scope="text, record">
             <a-switch
@@ -99,7 +116,7 @@
             />
           </template>
           <template slot="action" slot-scope="text, record">
-            <a style="margin-right:10px;" slot="action" @click="() => editor(record.uid,record)">修改</a>
+            <a style="margin-right:10px;" slot="action" @click="() => editor(record.uid,record)">编辑</a>
           </template>
         </a-table>
       </a-layout-content>
@@ -120,6 +137,9 @@
           </a-form-item>
           <a-form-item label="微信号" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
             <a-input v-decorator="['wechatId',{initialValue: editValue.wechatId}]" />
+          </a-form-item>
+          <a-form-item label="推荐人ID" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
+            <a-input v-decorator="['upUserId',{initialValue: editValue.upUserId}]" />
           </a-form-item>
           <a-form-item label="推荐人手机号" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
             <a-input v-decorator="['upUserPhone',{initialValue: editValue.upUserPhone}]" />
@@ -214,6 +234,9 @@
           </a-form-item>
         </a-form>
       </a-modal>
+      <a-modal :visible="imgVisible" :footer="null" @cancel="cancelImg">
+        <img alt="example" style="width: 100%" :src="showImage" />
+      </a-modal>
     </div>
   </div>
 </template>
@@ -233,6 +256,10 @@ const columns = [
     title: "头像",
     dataIndex: "headPic",
     scopedSlots: { customRender: "headPic" }
+  },
+  {
+    title: "UID",
+    dataIndex: "uid"
   },
   {
     title: "会员名",
@@ -270,11 +297,13 @@ const columns = [
   },
   {
     title: "会员状态",
+    width:100,
     dataIndex: "statu",
     scopedSlots: { customRender: "statu" }
   },
   {
     title: "操作",
+    width:"6%",
     dataIndex: "action",
     scopedSlots: { customRender: "action" }
   }
@@ -283,6 +312,7 @@ const columns = [
 export default {
   data() {
     return {
+      isCollapse: false,
       tableLoading: true,
       delmsg: null,
       data: null,
@@ -323,7 +353,9 @@ export default {
       fileListE: [],
       previewVisible: false,
       previewImage: "",
-      bgImgUrl: ""
+      bgImgUrl: "",
+      imgVisible: false, //以上传图片的放大页面key外
+      showImage: "" //放大图片rul外
       // getListData: {
       //   province: "",
       //   city: "",
@@ -341,7 +373,6 @@ export default {
       //周期获取
       this.queryParam = this.firstParam;
       this.getTableList();
-      
     },
     handleTableChange(pagination) {
       //分页跳转
@@ -472,10 +503,20 @@ export default {
       this.previewImage = file.url || file.thumbUrl;
       this.previewVisible = true;
     },
+    cancelImg() {
+      //取消放大图片外
+      this.imgVisible = false;
+    },
+    imgClick(text) {
+      //点击图片放大外
+      this.imgVisible = true;
+      this.showImage = text;
+    },
     handleChange({ fileList }, id) {
       // 上传片列表回调
       this.fileListE = fileList;
     },
+
     // // 地址联级接收
     // onChangeProvince(data) {
     //   this.getListData.province = data.value;
@@ -540,9 +581,24 @@ export default {
         }
       });
     },
+    modifyCancel() {
+      this.bgImgUrl = "";
+      this.fileListE = [];
+      this.previewImage = "";
+      this.modify.visible = false;
+    },
+    resetSearch() {
+      this.searchform.resetFields();
+      this.queryParam = this.firstParam;
+      this._financeOrder();
+    },
+    // 搜索框展开
+    openSearch() {
+      this.isCollapse = !this.isCollapse;
+    },
     searchSubmit(e) {
       //搜索
-      this.queryParam = this.firstParam
+      this.queryParam = this.firstParam;
       e.preventDefault();
       this.searchform.validateFields((err, values) => {
         // console.log(values);
@@ -557,10 +613,10 @@ export default {
             .format("YYYY-MM-DD")
             .concat(" 23:59:59");
         }
-        if(values.statu === "null"){
+        if (values.statu === "null") {
           values.statu = null;
         }
-        if(values.vtype === "null"){
+        if (values.vtype === "null") {
           values.vtype = null;
         }
         target.endTime = values.endTime;
@@ -568,20 +624,13 @@ export default {
         target.statu = values.statu;
         target.vType = values.vtype;
         target.upUserPhone = values.upUserPhone;
-         if (values.inValue) {
+        if (values.inValue) {
           const str = values.selKey;
           target[str] = values.inValue;
         }
-       this.queryParam = Object.assign({},this.queryParam,target)
+        this.queryParam = Object.assign({}, this.queryParam, target);
         this.getTableList();
       });
-    },
-
-    modifyCancel() {
-      this.bgImgUrl = "";
-      this.fileListE = [];
-      this.previewImage = "";
-      this.modify.visible = false;
     }
   }
 };

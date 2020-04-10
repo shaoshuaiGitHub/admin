@@ -19,6 +19,7 @@
       :columns="columns"
       :rowKey="record => record.dfId"
       @change="handleTableChange"
+      :scroll="{x:500}"
     >
       <template slot="moneyPer" slot-scope="text, record">
         <a-input-number

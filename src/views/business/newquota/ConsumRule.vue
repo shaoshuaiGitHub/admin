@@ -19,6 +19,7 @@
       :pagination="pagination"
       :rowKey="record => record.rid"
       @change="handleTableChange"
+      :scroll="{x:700}"
     >
       <template slot="quotaPer" slot-scope="text, record">
         <a-input-number

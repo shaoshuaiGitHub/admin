@@ -24,11 +24,12 @@
           </a-form-item>
           <a-form-item>
             <a-button type="primary" html-type="submit">搜索</a-button>
+            <a-button :style="{marginLeft:'10px'}" @click="resetSearch">重置</a-button>
           </a-form-item>
         </a-form>
         <div
           class="pages-list-table-list"
-          :style="{marginTop:'10px',display:'flex',flexDirection:'row',justifyContent:'flex-end'}"
+          :style="{marginTop:'10px',display:'flex',flexDirection:'row',justifyContent:'flex-start'}"
         >
           <a-button type="primary" icon="form" @click="showModal">新增角色</a-button>
         </div>
@@ -40,6 +41,7 @@
           :columns="columns"
           :dataSource="data"
           :rowKey="record => record.roleId"
+          :scroll="{x:600}"
         >
           <template slot="action" slot-scope="text, record">
             <a style="margin-right:10px;" slot="action" @click="() => editor(record.roleId)">修改权限内容</a>
@@ -142,6 +144,11 @@ export default {
     //新增
     showModal() {
       this.$router.push("/system/roleadd");
+    },
+    //重置搜索
+    resetSearch() {
+      this.searchform.resetFields();
+      this._rolePage();
     },
     searchSubmit(e) {
       //搜索

@@ -36,7 +36,7 @@
             </a-form-item>
             <a-form-item label="状态">
               <a-select
-                style="width:100px;"
+                style="width:150px;"
                 v-decorator="['serviceStatus', {rules: [{ required: false, message: '请选择状态' }]}]"
               >
                 <a-select-option value="0">停用</a-select-option>
@@ -47,13 +47,13 @@
 
             <a-form-item>
               <a-button type="primary" html-type="submit">搜索</a-button>
+              <a-button :style="{marginLeft:'10px'}" @click="resetSearch">重置</a-button>
             </a-form-item>
           </a-form>
-          <div class="pages-list-table-list" style="margin-top:10px">
-            <a-button type="primary" icon="form" @click="addModal">新增服务配置</a-button>
-          </div>
         </div>
-
+         <div style="margin:20px 0;display:flex;flexDirection:row;justifyContent:flex-start">
+          <a-button type="primary" icon="plus" @click="addModal">新增配置</a-button>
+        </div>
         <a-table
           :loading="tableLoading"
           :columns="columns"
@@ -61,7 +61,11 @@
           :pagination="pagination"
           :rowKey="record => record.sid"
           @change="handleTableChange"
+          :scroll="{x:850}"
         >
+          <template slot="headPic" slot-scope="text">
+            <img :src="text" alt="未找到图片" class="header-icon" @click="() => imgClick(text)" />
+          </template>
           <template slot="serviceStatus" slot-scope="text, record">
             <a-switch
               checkedChildren="启用"
@@ -71,7 +75,7 @@
             />
           </template>
           <template slot="action" slot-scope="text, record">
-            <a style="margin-right:10px;" slot="action" @click="() => editor(record.sid,record)">修改</a>
+            <a style="margin-right:10px;" slot="action" @click="() => editor(record.sid,record)">编辑</a>
             <span>
               <a class="deletes" @click="() => deletes(record.sid)">删除</a>
             </span>
@@ -102,20 +106,30 @@
             <a-input v-decorator="['wxNum',{initialValue: this.editValue.wxNum}]" />
           </a-form-item>
           <a-form-item label="头像" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
-            <a-input v-decorator="['headPic',{initialValue: this.editValue.headPic}]" />
+            <div>
+              <a-upload
+                listType="picture"
+                :defaultFileList="fileListE"
+                class="upload-list-inline"
+                @preview="handlePreview"
+                @change=" value => handleChange(value, editValue.sid)"
+                :customRequest=" value => customRequest(value,editValue.sid)"
+                v-decorator="['headPic']"
+              >
+                <a-button v-if="fileListE.length < 1">
+                  <a-icon type="upload" />上传
+                </a-button>
+              </a-upload>
+            </div>
+            <a-modal :visible="previewVisible" :footer="null" @cancel="handleCancelImg">
+              <img alt="example" style="width: 100%" :src="previewImage" />
+            </a-modal>
           </a-form-item>
           <a-form-item label="排序" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
             <a-input v-decorator="['sort',{initialValue: this.editValue.sort}]" />
           </a-form-item>
           <a-form-item label="描述" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
             <a-input v-decorator="['description',{initialValue: this.editValue.description}]" />
-          </a-form-item>
-          <a-form-item label="服务状态" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
-            <a-switch
-              checkedChildren="启用"
-              unCheckedChildren="停用"
-              v-decorator="['serviceStatus',{initialValue: editValue.serviceStatus === 1,valuePropName: 'checked'}]"
-            />
           </a-form-item>
           <a-form-item :wrapper-col="{ span: 12, offset: 6 }">
             <a-button type="primary" html-type="submit">保存</a-button>
@@ -146,7 +160,24 @@
             <a-input v-decorator="['wxNum']" />
           </a-form-item>
           <a-form-item label="头像" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
-            <a-input v-decorator="['headPic']" />
+            <div>
+              <a-upload
+                listType="picture"
+                :defaultFileList="fileList"
+                class="upload-list-inline"
+                @preview="handlePreview"
+                @change="handleChange"
+                :customRequest="customRequest"
+                v-decorator="['headPic']"
+              >
+                <a-button v-if="fileList.length < 1">
+                  <a-icon type="upload" />上传
+                </a-button>
+              </a-upload>
+            </div>
+            <a-modal :visible="previewVisible" :footer="null" @cancel="handleCancelImg">
+              <img alt="example" style="width: 100%" :src="previewImage" />
+            </a-modal>
           </a-form-item>
           <a-form-item label="排序" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
             <a-input v-decorator="['sort']" />
@@ -155,17 +186,15 @@
             <a-input v-decorator="['description']" />
           </a-form-item>
           <a-form-item label="服务状态" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
-            <a-switch
-              checkedChildren="启用"
-              unCheckedChildren="停用"
-              defaultChecked
-              v-decorator="['serviceStatus']"
-            />
+            <a-switch checkedChildren="启用" unCheckedChildren="停用" v-decorator="['serviceStatus']" />
           </a-form-item>
           <a-form-item :wrapper-col="{ span: 12, offset: 6 }">
             <a-button type="primary" html-type="submit">保存</a-button>
           </a-form-item>
         </a-form>
+      </a-modal>
+      <a-modal :visible="imgVisible" :footer="null" @cancel="cancelImg">
+        <img alt="example" style="width: 100%" :src="showImage" />
       </a-modal>
     </div>
   </div>
@@ -177,7 +206,8 @@ import {
   customerUpdate,
   customerAdd,
   customerDelete,
-  customerDeletes
+  customerDeletes,
+  uploadCustomerIcon
 } from "api";
 const columns = [
   {
@@ -212,10 +242,12 @@ const columns = [
   {
     title: "排序",
     dataIndex: "sort",
-    scopedSlots: { customRender: "sort" }
+    scopedSlots: { customRender: "sort" },
+    sorter: (a, b) => a.sort - b.sort
   },
   {
     title: "服务状态",
+    width:100,
     dataIndex: "serviceStatus",
     scopedSlots: { customRender: "serviceStatus" }
   },
@@ -267,7 +299,13 @@ export default {
       },
       searchform: this.$form.createForm(this),
       modifyform: this.$form.createForm(this),
-      serviceaddform: this.$form.createForm(this)
+      serviceaddform: this.$form.createForm(this),
+      fileListE: [],
+      fileList: [],
+      previewVisible: false,
+      previewImage: "",
+      imgVisible: false, //以上传图片的放大页面key外
+      showImage: "" //放大图片rul外
     };
   },
   created() {
@@ -296,21 +334,10 @@ export default {
         pagination.total = res.data.total;
         that.pagination = pagination;
         that.data = res.data.list;
-        // console.log(res);
-        // console.log(that.data);
         setTimeout(() => {
           that.tableLoading = false;
         }, 200);
       });
-    },
-    addModal() {
-      this.addservice.visible = true;
-    },
-    editor(id, editValue) {
-      //点击修改按钮
-      this.editValue = editValue;
-      this.editId = id;
-      this.modify.visible = true;
     },
     stopbution(id, status) {
       //状态切换
@@ -335,24 +362,73 @@ export default {
         }
       });
     },
-
+    customRequest(data, id) {
+      //自定义上传
+      const formData = new FormData();
+      formData.append("file", data.file);
+      uploadCustomerIcon(formData).then(res => {
+        if (res.code) {
+          if (id) {
+            this.$message.success(res.msg);
+            this.fileListE[0].status = "done";
+            this.fileListE[0].url = res.data.url;
+          } else {
+            this.$message.success(res.msg);
+            this.fileList[0].status = "done";
+            this.fileList[0].url = res.data.url;
+          }
+        }
+      });
+    },
+    handleCancelImg() {
+      //取消放大图片
+      this.previewVisible = false;
+    },
+    handlePreview(file) {
+      //点击图片放大
+      this.previewImage = file.url || file.thumbUrl;
+      this.previewVisible = true;
+    },
+    cancelImg() {
+      //取消放大图片外
+      this.imgVisible = false;
+    },
+    imgClick(text) {
+      //点击图片放大外
+      this.imgVisible = true;
+      this.showImage = text;
+    },
+    handleChange(value, id) {
+      // 上传片列表回调
+      if (id) {
+        this.fileListE = value.fileList;
+      } else {
+        this.fileList = value.fileList;
+      }
+    },
+    editor(id, editValue) {
+      //点击修改按钮
+      this.editValue = editValue;
+      this.editId = id;
+      this.modify.visible = true;
+    },
     // 修改用户
     modifySubmit(e) {
       let that = this;
       e.preventDefault();
       that.modifyform.validateFields((err, values) => {
         console.log(values);
-        values.sid = that.editId;
-        if (values.serviceStatus) {
-          values.serviceStatus = 1;
-        } else {
-          values.serviceStatus = 0;
-        }
         let formData = new FormData();
+        values.sid = that.editId;
+        if (values.headPic) {
+          if (values.headPic.fileList[0]) {
+            formData.append("headPic", values.headPic.fileList[0].url);
+          } else {
+            formData.append("headPic", that.editValue.headPic);
+          }
+        }
         formData.append("sid", values.sid);
-        formData.append("serviceStatus", values.serviceStatus);
         formData.append("description", values.description);
-        formData.append("headPic", values.headPic);
         formData.append("qqNum", values.qqNum);
         formData.append("serviceName", values.serviceName);
         formData.append("servicePhone", values.servicePhone);
@@ -362,27 +438,38 @@ export default {
           customerUpdate(formData).then(res => {
             if (res.code) {
               that.$message.success(res.msg);
+              that._customerPage();
               that.modify.visible = false;
-              this._customerPage();
+              that.fileListE.splice(0, that.fileListE.length);
             }
           });
         }
       });
     },
-
+    modifyCancel() {
+      this.modify.visible = false;
+      this.fileListE.splice(0, this.fileListE.length);
+    },
+    addModal() {
+      this.addservice.visible = true;
+    },
     addserviceSubmit(e) {
       let that = this;
       e.preventDefault();
       that.serviceaddform.validateFields((err, values) => {
+        let formData = new FormData();
+        if (values.headPic) {
+          if (values.headPic.fileList[0]) {
+            formData.append("headPic", values.headPic.fileList[0].url);
+          }
+        }
         if (values.serviceStatus) {
           values.serviceStatus = 1;
         } else {
           values.serviceStatus = 0;
         }
-        let formData = new FormData();
         formData.append("serviceStatus", values.serviceStatus);
         formData.append("description", values.description);
-        formData.append("headPic", values.headPic);
         formData.append("qqNum", values.qqNum);
         formData.append("serviceName", values.serviceName);
         formData.append("servicePhone", values.servicePhone);
@@ -393,12 +480,22 @@ export default {
             if (res.code) {
               that.$message.success(res.msg);
               that.addservice.visible = false;
-              this._customerPage();
+              that.fileList.splice(0, that.fileList.length);
+              that._customerPage();
             }
           });
         }
       });
     },
+    serviceCancel() {
+      this.addservice.visible = false;
+    },
+    //重置搜索
+    resetSearch() {
+      this.searchform.resetFields();
+      this._customerPage();
+    },
+    // 搜索
     searchSubmit(e) {
       this.queryParam = this.firstParam;
       e.preventDefault();
@@ -411,17 +508,11 @@ export default {
           values.serviceStatus = null;
         }
         target.serviceStatus = values.serviceStatus;
-        this.queryParam = Object.assign({},this.queryParam, target);
+        this.queryParam = Object.assign({}, this.queryParam, target);
         this.getTableList();
       });
     },
 
-    modifyCancel() {
-      this.modify.visible = false;
-    },
-    serviceCancel() {
-      this.addservice.visible = false;
-    },
     handleOk() {
       //确定删除
       let that = this;
@@ -462,7 +553,12 @@ export default {
 };
 </script>
 <style scoped>
-.deletes{
-    color: #f5222d;
+.deletes {
+  color: #f5222d;
+}
+.header-icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
 }
 </style>

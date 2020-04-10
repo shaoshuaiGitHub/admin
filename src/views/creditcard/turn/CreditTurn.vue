@@ -10,6 +10,8 @@
           </a-breadcrumb>
           <div class="ant-page-header-heading">
             <span class="ant-page-header-heading-title">信用卡列表</span>
+            ————&nbsp;&nbsp;
+            <a-button type="primary" icon="sync" :loading="reloadings" @click="reloadFun">刷新</a-button>&nbsp;&nbsp;————
           </div>
         </div>
       </div>
@@ -25,8 +27,14 @@
           <a-form layout="inline" :form="searchform" @submit="searchSubmit">
             <!-- 搜索框 -->
             <a-form-item>
-              <a-input v-decorator="['inValue']" placeholder="输入条件">
-                <a-select v-decorator="['selKey',{initialValue: 'userName'}]" slot="addonBefore">
+              <a-input
+                v-decorator="['inValue',{initialValue: Object.values(searchValue)[0]}]"
+                placeholder="输入条件"
+              >
+                <a-select
+                  v-decorator="['selKey',{initialValue: Object.keys(searchValue)[0]}]"
+                  slot="addonBefore"
+                >
                   <a-select-option value="userName">用户名</a-select-option>
                   <a-select-option value="phone">电话号码</a-select-option>
                   <a-select-option value="realName">真实姓名</a-select-option>
@@ -35,6 +43,7 @@
             </a-form-item>
             <a-form-item>
               <a-button type="primary" html-type="submit">搜索</a-button>
+              <a-button :style="{marginLeft:'10px'}" @click="reloadFun">重置</a-button>
             </a-form-item>
           </a-form>
         </div>
@@ -46,10 +55,16 @@
           :rowKey="record => record.user.uid"
           @change="handleTableChange"
           :bordered="true"
+          :scroll="{x:800}"
         >
           <template slot="vType" slot-scope="text">{{filterType(text)}}</template>
+          <template slot="longSurplus" slot-scope="text">{{Number(text).toFixed(2)}}</template>
           <template slot="action" slot-scope="text, record">
-            <a-button type="primary" class="status-detail" @click="() => detail(record.user.uid,record.user.phone)">周转详情</a-button>
+            <a-button
+              type="primary"
+              class="status-detail"
+              @click="() => detail(record.user.uid,record.user.phone)"
+            >周转详情</a-button>
           </template>
         </a-table>
       </a-layout-content>
@@ -58,6 +73,11 @@
 </template>
 <script>
 import { creditTurnoverPage, goodsInfo } from "api";
+import {
+  setContextData,
+  getContextData,
+  removeContextData
+} from "../../../common/js/util";
 const columns = [
   {
     title: "用户名称",
@@ -84,7 +104,7 @@ const columns = [
     scopedSlots: { customRender: "cardNumber" }
   },
   {
-    title: "总额度",
+    title: "总额度（元）",
     dataIndex: "planData.totalInfo.totalQuota",
     scopedSlots: { customRender: "totalQuota" }
   },
@@ -111,8 +131,10 @@ const columns = [
 ];
 
 export default {
+  inject: ["reload"], //重载函数
   data() {
     return {
+      reloadings: true,
       tableLoading: true,
       data: [],
       goodData: [],
@@ -124,32 +146,45 @@ export default {
       formLayout: "horizontal",
       pagination: {
         total: 0,
-        defaultCurrent: 0,
+        defaultCurrent: 1,
         defaultPageSize: 10,
         showTotal: total => `共 ${total} 条数据`,
         showSizeChanger: true,
         pageSizeOptions: ["5", "10", "15", "20"],
         showQuickJumper: true
       },
-      queryParam: {
-        pageNum: 0, //第几页
-        pageSize: 10 //每页中显示数据的条数
-      },
-      firstParam: {
-        pageNum: 0, //第几页
-        pageSize: 10 //每页中显示数据的条数
-      },
+      queryParam: {},
+      searchValue: {},
+      key: this.$route.meta.key[0],
       searchform: this.$form.createForm(this)
     };
   },
   created() {
-     this._goodsInfo();
+    this._goodsInfo();
+    //缓存中获取当前页码（详情页回退时候当前主页的时候）
+    this.pagination.current = getContextData("currentPage" + this.key) || 1;
+    this.searchValue = getContextData("searchValue" + this.key) || {
+      userName: null
+    };
+    this.queryParam = Object.assign({}, this.queryParam, this.searchValue);
+    this.queryParam.pageNum = this.pagination.current;
     this._creditTurnoverPage();
   },
+  mounted: function() {
+    setContextData();
+    getContextData();
+    removeContextData();
+  },
   methods: {
+    // 刷新页面
+    reloadFun() {
+      this.reloadings = true;
+      removeContextData("currentPage" + this.key);
+      removeContextData("searchValue" + this.key);
+      this.reload();
+    },
     _creditTurnoverPage() {
       //周期获取
-      this.queryParam = this.firstParam;
       this.getTableList();
     },
     handleTableChange(pagination) {
@@ -158,6 +193,7 @@ export default {
       this.pagination.pageSize = pagination.pageSize;
       this.queryParam.pageNum = pagination.current;
       this.queryParam.pageSize = pagination.pageSize;
+      setContextData("currentPage" + this.key, this.pagination.current);
       this.tableLoading = true;
       this.getTableList();
     },
@@ -170,10 +206,8 @@ export default {
           pagination.total = res.data.total;
           that.pagination = pagination;
           that.data = res.data.list;
-          setTimeout(() => {
-            that.tableLoading = false;
-          }, 200);
-          that.queryParam = that.firstParam;
+          that.tableLoading = false;
+          that.reloadings = false;
         }
       });
     },
@@ -203,15 +237,22 @@ export default {
       });
     },
     searchSubmit(e) {
+      //重置搜索条件
+      this.queryParam = {};
+      removeContextData("currentPage" + this.key);
+      removeContextData("searchValue" + this.key);
+      this.pagination.current = 1;
+      this.searchValue = {};
       //搜索提交
-      this.queryParam = this.firstParam;
       e.preventDefault();
       this.searchform.validateFields((err, values) => {
         const str = values.selKey;
         let target = {};
-        if (values.inValue) {
-          target[str] = values.inValue;
-        }
+
+        target[str] = values.inValue;
+
+        this.searchValue = target;
+        setContextData("searchValue" + this.key, this.searchValue);
         this.queryParam = Object.assign({}, this.queryParam, target);
         this.getTableList();
       });
@@ -222,6 +263,5 @@ export default {
 <style scoped>
 .status-detail {
   padding: 5px;
-
 }
 </style>

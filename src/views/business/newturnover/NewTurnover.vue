@@ -32,7 +32,7 @@
             >
               <div
                 class="headButton"
-                :style="{display:'flex',flexDirection:'row',justifyContent:'flex-end'}"
+                :style="{display:'flex',flexDirection:'row',justifyContent:'flex-start'}"
               >
                 <div class="pages-list-table-list" style="margin-top:15px">
                   <a-button type="primary" style="margin-right:50px" @click="saveall">保存修改</a-button>

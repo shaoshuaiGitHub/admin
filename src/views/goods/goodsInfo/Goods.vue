@@ -29,7 +29,7 @@
             </a-form-item>
             <a-form-item label="订单类型">
               <a-select
-                style="width:100px;"
+                style="width:150px;"
                 v-decorator="['goodsType', {rules: [{ required: false, message: '请选择类型' }]}]"
               >
                 <a-select-option :value="1">VIP订单</a-select-option>
@@ -39,19 +39,14 @@
                 <a-select-option value="null">全部</a-select-option>
               </a-select>
             </a-form-item>
-
             <a-form-item>
               <a-button type="primary" html-type="submit">搜索</a-button>
+              <a-button :style="{marginLeft:'10px'}" @click="resetSearch">重置</a-button>
             </a-form-item>
           </a-form>
-          <div>
-            <a-button
-              type="primary"
-              icon="plus"
-              :style="{ margin: '0 0 24px 0 ' }"
-              @click="addModal"
-            >新增配置</a-button>
-          </div>
+        </div>
+        <div style="margin:20px 0;display:flex;flexDirection:row;justifyContent:flex-start">
+          <a-button type="primary" icon="plus" @click="addModal">新增配置</a-button>
         </div>
         <a-table
           bordered
@@ -62,6 +57,7 @@
           :dataSource="data"
           :columns="columns"
           :rowKey="record => record.goodsId"
+          :scroll="{x:800}"
         >
           <template slot="goodsName" slot-scope="text, record">
             <a-icon style="margin-right:15px" slot="suffixIcon" type="smile" theme="twoTone" />
@@ -73,7 +69,12 @@
             />
           </template>
           <template slot="goodsBgi" slot-scope="text">
-            <img :src="text" alt="未找到图片" :style="{width:'100px',height:'60px'}" />
+            <img
+              :src="text"
+              alt="未找到图片"
+              :style="{width:'100px',height:'60px',cursor: 'pointer'}"
+              @click="() => imgClick(text)"
+            />
           </template>
           <template slot="goodsType" slot-scope="text, record">
             <a-select
@@ -83,10 +84,10 @@
               @blur="value=>handleChange2(value,record.goodsId,'goodsType')"
             >
               <a-select-option
-                v-for="(item,index) in selectValue"
-                :value="index+1"
-                :key="index"
-              >{{item}}</a-select-option>
+                v-for="item in selectValue"
+                :value="item.value"
+                :key="item.value"
+              >{{item.name}}</a-select-option>
             </a-select>
           </template>
           <template v-for="col in ['term','goodsSort']" :slot="col" slot-scope="text,record">
@@ -111,13 +112,23 @@
               <span style="margin-left:5px">元</span>
             </div>
           </template>
+          <template slot="creditPoints" slot-scope="text, record">
+            <div>
+              <a-input
+                style="width:80px"
+                :defaultValue="text"
+                class="sort-input"
+                @blur="e => handleChange2(e.target.value, record.goodsId,'creditPoints')"
+              />
+            </div>
+          </template>
           <template slot="operation" slot-scope="text, record">
             <div class="editable-row-operations">
               <a
                 style="margin-right:10px;"
                 slot="action"
                 @click="() => editor(record.goodsId,record)"
-              >修改</a>
+              >编辑</a>
               <span>
                 <a class="deletes" @click="() => deletes(record.goodsId)">删除</a>
               </span>
@@ -144,6 +155,9 @@
         <a-form-item label="商品价格" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
           <a-input v-decorator="['goodsAmount',{initialValue: editValue.goodsAmount}]" />
         </a-form-item>
+        <a-form-item label="信用点价格" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
+          <a-input v-decorator="['creditPoints',{initialValue: editValue.creditPoints}]" />
+        </a-form-item>
         <a-form-item label="排序" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
           <a-input v-decorator="['goodsSort',{initialValue: editValue.goodsSort}]" />
         </a-form-item>
@@ -152,10 +166,11 @@
             style="width:100px;"
             v-decorator="['goodsType',{initialValue: editValue.goodsType }]"
           >
-            <a-select-option :value="1">VIP订单</a-select-option>
-            <a-select-option :value="2">实物订单</a-select-option>
-            <a-select-option :value="3">应用订单</a-select-option>
-            <a-select-option :value="4">信用点订单</a-select-option>
+            <a-select-option
+              v-for="item in selectValue"
+              :value="item.value"
+              :key="item.value"
+            >{{item.name}}</a-select-option>
           </a-select>
         </a-form-item>
         <a-form-item label="新商品图" :label-col="{ span: 5 }" :wrapper-col="{ span: 12}">
@@ -178,7 +193,6 @@
             <img alt="example" style="width: 100%" :src="previewImage" />
           </a-modal>
         </a-form-item>
-
         <a-form-item :wrapper-col="{ span: 12, offset: 6 }">
           <a-button type="primary" html-type="submit">保存</a-button>
         </a-form-item>
@@ -202,15 +216,19 @@
         <a-form-item label="商品价格" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
           <a-input v-decorator="['goodsAmount']" />
         </a-form-item>
+        <a-form-item label="信用点价格" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
+          <a-input v-decorator="['creditPoints']" />
+        </a-form-item>
         <a-form-item label="排序" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
           <a-input v-decorator="['goodsSort']" />
         </a-form-item>
         <a-form-item label="订单类型" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
           <a-select style="width:100px;" v-decorator="['goodsType']">
-            <a-select-option :value="1">VIP订单</a-select-option>
-            <a-select-option :value="2">实物订单</a-select-option>
-            <a-select-option :value="3">应用订单</a-select-option>
-            <a-select-option :value="4">信用点订单</a-select-option>
+            <a-select-option
+              v-for="item in selectValue"
+              :value="item.value"
+              :key="item.value"
+            >{{item.name}}</a-select-option>
           </a-select>
         </a-form-item>
         <a-form-item label="商品图" :label-col="{ span: 5 }" :wrapper-col="{ span: 12}">
@@ -237,6 +255,9 @@
           <a-button type="primary" html-type="submit">保存</a-button>
         </a-form-item>
       </a-form>
+    </a-modal>
+    <a-modal :visible="imgVisible" :footer="null" @cancel="cancelImg">
+      <img alt="example" style="width: 100%" :src="showImage" />
     </a-modal>
   </div>
 </template>
@@ -283,10 +304,17 @@ const columns = [
     scopedSlots: { customRender: "goodsBgi" }
   },
   {
+    title: "信用点价格",
+    // width: "18%",
+    dataIndex: "creditPoints",
+    scopedSlots: { customRender: "creditPoints" }
+  },
+  {
     title: "排序(越小越靠前)",
     // width: "18%",
     dataIndex: "goodsSort",
-    scopedSlots: { customRender: "goodsSort" }
+    scopedSlots: { customRender: "goodsSort" },
+     sorter: (a,b) => a.goodsSort - b.goodsSort
   },
   {
     title: "操作",
@@ -313,7 +341,12 @@ export default {
         confirmLoading: true
       },
       editValue: {},
-      selectValue: ["VIP订单", "实物订单", "应用订单", "信用点订单"],
+      selectValue: [
+        { name: "VIP订单", value: 1 },
+        { name: "实物订单", value: 2 },
+        { name: "应用订单", value: 3 },
+        { name: "信用点订单", value: 4 }
+      ],
       pagination: {
         total: 0,
         defaultCurrent: 0,
@@ -337,7 +370,9 @@ export default {
       fileListE: [],
       fileList: [],
       previewVisible: false,
-      previewImage: ""
+      previewImage: "",
+      imgVisible: false, //以上传图片的放大页面key外
+      showImage: "" //放大图片rul外
     };
   },
   created() {
@@ -346,14 +381,9 @@ export default {
   methods: {
     //判断订单类型
     filterType(text) {
-      if (text == 1) {
-        return "VIP订单";
-      } else if (text == 2) {
-        return "实物订单";
-      } else if (text == 3) {
-        return "应用订单";
-      } else {
-        return "信用点订单";
+      if (text) {
+        const item = this.selectValue.filter(item => text == item.value)[0];
+        return item.name;
       }
     },
     compare(property) {
@@ -442,7 +472,15 @@ export default {
         this.fileList = value.fileList;
       }
     },
-
+    cancelImg() {
+      //取消放大图片外
+      this.imgVisible = false;
+    },
+    imgClick(text) {
+      //点击图片放大外
+      this.imgVisible = true;
+      this.showImage = text;
+    },
     addModal() {
       //新增按钮
       this.addservice.visible = true;
@@ -460,6 +498,9 @@ export default {
         }
         if (values.goodsAmount) {
           formData.goodsAmount = values.goodsAmount;
+        }
+        if (values.creditPoints) {
+          formData.creditPoints = values.creditPoints;
         }
         if (values.goodsName) {
           formData.goodsName = values.goodsName;
@@ -512,6 +553,9 @@ export default {
         if (values.goodsAmount) {
           formData.goodsAmount = values.goodsAmount;
         }
+        if (values.creditPoints) {
+          formData.creditPoints = values.creditPoints;
+        }
         if (values.goodsName) {
           formData.goodsName = values.goodsName;
         }
@@ -539,7 +583,11 @@ export default {
     modifyCancel() {
       this.modify.visible = false;
       this.fileListE.splice(0, this.fileListE.length);
-      
+    },
+    //重置搜索
+    resetSearch() {
+      this.searchform.resetFields();
+      this._goodsInfo();
     },
     //搜索
     searchSubmit(e) {
