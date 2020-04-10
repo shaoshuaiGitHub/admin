@@ -1,0 +1,877 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:1:1-46:12
+INJECTED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:1:1-46:12
+INJECTED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:1:1-46:12
+INJECTED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:1:1-46:12
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:1:1-46:12
+MERGED from [:multi_image_picker] D:\MyGit\frontflutter\build\multi_image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-7:12
+MERGED from [:flutter_image_compress] D:\MyGit\frontflutter\build\flutter_image_compress\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-9:12
+MERGED from [:sqflite] D:\MyGit\frontflutter\build\sqflite\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-7:12
+MERGED from [:fake_alipay] D:\MyGit\frontflutter\build\fake_alipay\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-7:12
+MERGED from [:flutter_inappbrowser] D:\MyGit\frontflutter\build\flutter_inappbrowser\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-20:12
+MERGED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-29:12
+MERGED from [:webview_flutter] D:\MyGit\frontflutter\build\webview_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-7:12
+MERGED from [:xs_progress_hud] D:\MyGit\frontflutter\build\xs_progress_hud\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-7:12
+MERGED from [:path_provider] D:\MyGit\frontflutter\build\path_provider\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-7:12
+MERGED from [:permission_handler] D:\MyGit\frontflutter\build\permission_handler\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-7:12
+MERGED from [:shared_preferences] D:\MyGit\frontflutter\build\shared_preferences\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-7:12
+MERGED from [:city_pickers] D:\MyGit\frontflutter\build\city_pickers\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-7:12
+MERGED from [:image_picker] D:\MyGit\frontflutter\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-22:12
+MERGED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:2:1-32:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\exifinterface-1.0.0.aar\6748f02970cae84ef6f64012e4b0f567\AndroidManifest.xml:17:1-22:12
+MERGED from [com.sangcomz:FishBun:0.9.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-FishBun-0.9.1.aar\4c7a3bd896e7e6cc499e7aee172da545\AndroidManifest.xml:2:1-34:12
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-glide-4.9.0.aar\91d7a6ebf4fab33a8bb6fda15ac16f8f\AndroidManifest.xml:2:1-12:12
+MERGED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:2:1-34:12
+MERGED from [androidx.webkit:webkit:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\webkit-1.0.0.aar\3f287b749dca4a5b23750e60e41f85c2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.browser:browser:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\browser-1.0.0.aar\6e4c5b16cd9bc8a18385ee89c589e3b0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.material:material:1.0.0-rc01] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\material-1.0.0-rc01.aar\d8bc09d0ebd245fb4e88dc61ec43686a\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0.aar\e6ef1e1e4bd2c2f5f0da93b9357ed11e\AndroidManifest.xml:17:1-22:12
+MERGED from [io.github.v7lin:wechat-android:5.3.1+1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\wechat-android-5.3.1+1.aar\c16dfdb5e5812590b0871dcb8bcfb149\AndroidManifest.xml:2:1-17:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\0a86e42d9d4f7acda302727f9dc63b40\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0-rc01] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\recyclerview-1.0.0-rc01.aar\a232bde60a185eaa0f27f86e002486bf\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\def5cf57fe36e8fa15878db6f60792f7\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0.aar\bfa352c1c76055e0daad1c50ef57fc1d\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\98092529e1d7424050d52de666e969f1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\bae0794d7a2405f454ed0bf2a0df74d7\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0.aar\d90010b1986e06549d770fcf00309921\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\f3a504d1889543c3218d42d25b4595cf\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.0.0-rc01] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\transition-1.0.0-rc01.aar\39d248133a4a2b2bb1a0aa85de6bf74f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\b387e1b9485ce10f64bb25d3ed007c15\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\38ee9df04d0c75f652ceabd915c5fed4\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\328f257a5007816273e5473bc116e7dd\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0.aar\3751c87412bb285a864d6653b9cc8488\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\6ca583272c454516a37d50787cc3955c\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0.aar\17567430687d16d748fa0ec0f9e004ef\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\eca24e73a8028df43a1bcac902779229\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\6bf5c971cf62b1efc9ad4eb73d80b282\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\core-1.0.1.aar\6b17f8d533a0ca32ca9a6a91ffcc1ecb\AndroidManifest.xml:17:1-24:12
+MERGED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:2:1-134:12
+MERGED from [cn.jiguang.sdk:jcore:1.2.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jcore-1.2.5.aar\bbd31a2439056d3e4b22dcac69a15a17\AndroidManifest.xml:2:1-14:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\7a1c107a2a121c7b9479d66b06999860\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\6037f61ff2704385381f0d2b8ae93a6d\AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\3d58fc46038d71c88c29252e2013f0d9\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\0bf6b539b87970c4fdd0c209e32088f1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0-rc01] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0-rc01.aar\e126ec5bca05425a98721342d847bff6\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\5dd5a14db01e08afa79aa51741fe9a58\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\f2fd7c11e52c5d0d1733108415aa30f9\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\302142727ca846a7eb6242396075a5c6\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\3d7400f17b6cd88415a71bf433106b8a\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\83e02beae5215f91d1058cd7010bba64\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\f91776b8e8f86817f93a567df005e79e\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\fd3f93a3bd2ed8c08d5a1045889b66ec\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-gifdecoder-4.9.0.aar\466aa83b88a5cc735b84284548a16e67\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\constraintlayout-1.1.2.aar\46e296452561f67557a3e8fb7d9ccbad\AndroidManifest.xml:2:1-11:12
+INJECTED from D:\MyGit\frontflutter\android\app\src\debug\AndroidManifest.xml:1:1-31:12
+INJECTED from D:\MyGit\frontflutter\android\app\src\debug\AndroidManifest.xml:1:1-31:12
+INJECTED from D:\MyGit\frontflutter\android\app\src\debug\AndroidManifest.xml:1:1-31:12
+	package
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:1:70-104
+		INJECTED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\MyGit\frontflutter\android\app\src\debug\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:1:1-46:12
+		INJECTED from D:\MyGit\frontflutter\android\app\src\debug\AndroidManifest.xml
+	android:versionCode
+		INJECTED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:1:1-46:12
+		INJECTED from D:\MyGit\frontflutter\android\app\src\debug\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:2:5-66
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:2:5-66
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:2:5-66
+MERGED from [:flutter_inappbrowser] D:\MyGit\frontflutter\build\flutter_inappbrowser\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-67
+MERGED from [:flutter_inappbrowser] D:\MyGit\frontflutter\build\flutter_inappbrowser\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-67
+MERGED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-67
+MERGED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-67
+MERGED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:11:5-67
+MERGED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:11:5-67
+MERGED from [io.github.v7lin:wechat-android:5.3.1+1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\wechat-android-5.3.1+1.aar\c16dfdb5e5812590b0871dcb8bcfb149\AndroidManifest.xml:11:5-67
+MERGED from [io.github.v7lin:wechat-android:5.3.1+1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\wechat-android-5.3.1+1.aar\c16dfdb5e5812590b0871dcb8bcfb149\AndroidManifest.xml:11:5-67
+MERGED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:18:5-67
+MERGED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:18:5-67
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:2:22-64
+uses-permission#android.permission.READ_CONTACTS
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:3:5-72
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:3:5-72
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:3:5-72
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:6:5-72
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:6:5-72
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:3:22-69
+uses-permission#android.permission.WRITE_CALENDAR
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:4:5-73
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:4:5-73
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:4:5-73
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:16:5-73
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:16:5-73
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:4:22-70
+uses-permission#android.permission.CAMERA
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:5:5-65
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:5:5-65
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:5:5-65
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:5:22-62
+uses-permission#android.permission.WRITE_CONTACTS
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:7:5-73
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:7:5-73
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:7:5-73
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:7:22-70
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:8:5-71
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:8:5-71
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:8:5-71
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:8:22-68
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:9:5-79
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:9:5-79
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:9:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:33:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:33:5-79
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:9:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:10:5-81
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:10:5-81
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:10:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:31:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:31:5-81
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:10:22-78
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:11:5-71
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:11:5-71
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:11:5-71
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:11:22-68
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:12:5-75
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:12:5-75
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:12:5-75
+MERGED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:10:5-75
+MERGED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:10:5-75
+MERGED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:14:5-75
+MERGED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:14:5-75
+MERGED from [io.github.v7lin:wechat-android:5.3.1+1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\wechat-android-5.3.1+1.aar\c16dfdb5e5812590b0871dcb8bcfb149\AndroidManifest.xml:14:5-75
+MERGED from [io.github.v7lin:wechat-android:5.3.1+1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\wechat-android-5.3.1+1.aar\c16dfdb5e5812590b0871dcb8bcfb149\AndroidManifest.xml:14:5-75
+MERGED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:20:5-75
+MERGED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:20:5-75
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:12:22-72
+uses-permission#android.permission.CALL_PHONE
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:13:5-69
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:13:5-69
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:13:5-69
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:13:22-66
+uses-permission#android.permission.READ_CALL_LOG
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:14:5-72
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:14:5-72
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:14:5-72
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:14:22-69
+uses-permission#android.permission.WRITE_CALL_LOG
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:15:5-73
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:15:5-73
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:15:5-73
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:15:22-70
+uses-permission#android.permission.ADD_VOICEMAIL
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:17:5-72
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:17:5-72
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:17:5-72
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:17:22-69
+uses-permission#android.permission.USE_SIP
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:18:5-66
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:18:5-66
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:18:5-66
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:18:22-63
+uses-permission#android.permission.PROCESS_OUTGOING_CALLS
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:19:5-81
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:19:5-81
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:19:5-81
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:19:22-78
+uses-permission#android.permission.BODY_SENSORS
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:20:5-71
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:20:5-71
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:20:5-71
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:20:22-68
+uses-permission#android.permission.SEND_SMS
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:21:5-67
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:21:5-67
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:21:5-67
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:21:22-64
+uses-permission#android.permission.RECEIVE_SMS
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:22:5-70
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:22:5-70
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:22:5-70
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:22:22-67
+uses-permission#android.permission.READ_SMS
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:23:5-67
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:23:5-67
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:23:22-64
+uses-permission#android.permission.RECEIVE_WAP_PUSH
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:24:5-75
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:24:5-75
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:24:5-75
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:24:22-72
+uses-permission#android.permission.RECEIVE_MMS
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:25:5-70
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:25:5-70
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:25:5-70
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:25:22-67
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:26:5-80
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:26:5-80
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:26:5-80
+MERGED from [:image_picker] D:\MyGit\frontflutter\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-80
+MERGED from [:image_picker] D:\MyGit\frontflutter\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-80
+MERGED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:22:5-80
+MERGED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:22:5-80
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:26:22-77
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:27:5-81
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:27:5-81
+MERGED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:27:5-81
+MERGED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:11:5-81
+MERGED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:11:5-81
+MERGED from [:image_picker] D:\MyGit\frontflutter\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:8:5-81
+MERGED from [:image_picker] D:\MyGit\frontflutter\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:8:5-81
+MERGED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:15:5-81
+MERGED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:15:5-81
+MERGED from [io.github.v7lin:wechat-android:5.3.1+1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\wechat-android-5.3.1+1.aar\c16dfdb5e5812590b0871dcb8bcfb149\AndroidManifest.xml:15:5-81
+MERGED from [io.github.v7lin:wechat-android:5.3.1+1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\wechat-android-5.3.1+1.aar\c16dfdb5e5812590b0871dcb8bcfb149\AndroidManifest.xml:15:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:21:5-81
+MERGED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:21:5-81
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:27:22-78
+application
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:33:5-45:19
+MERGED from [:flutter_inappbrowser] D:\MyGit\frontflutter\build\flutter_inappbrowser\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:9:5-18:19
+MERGED from [:flutter_inappbrowser] D:\MyGit\frontflutter\build\flutter_inappbrowser\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:9:5-18:19
+MERGED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:13:5-27:19
+MERGED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:13:5-27:19
+MERGED from [:image_picker] D:\MyGit\frontflutter\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:10:5-20:19
+MERGED from [:image_picker] D:\MyGit\frontflutter\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:10:5-20:19
+MERGED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-30:19
+MERGED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:7:5-30:19
+MERGED from [com.sangcomz:FishBun:0.9.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-FishBun-0.9.1.aar\4c7a3bd896e7e6cc499e7aee172da545\AndroidManifest.xml:11:5-32:19
+MERGED from [com.sangcomz:FishBun:0.9.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-FishBun-0.9.1.aar\4c7a3bd896e7e6cc499e7aee172da545\AndroidManifest.xml:11:5-32:19
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-glide-4.9.0.aar\91d7a6ebf4fab33a8bb6fda15ac16f8f\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-glide-4.9.0.aar\91d7a6ebf4fab33a8bb6fda15ac16f8f\AndroidManifest.xml:10:5-20
+MERGED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:17:5-32:19
+MERGED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:17:5-32:19
+MERGED from [com.google.android.material:material:1.0.0-rc01] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\material-1.0.0-rc01.aar\d8bc09d0ebd245fb4e88dc61ec43686a\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0-rc01] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\material-1.0.0-rc01.aar\d8bc09d0ebd245fb4e88dc61ec43686a\AndroidManifest.xml:22:5-20
+MERGED from [androidx.core:core:1.0.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\core-1.0.1.aar\6b17f8d533a0ca32ca9a6a91ffcc1ecb\AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\core-1.0.1.aar\6b17f8d533a0ca32ca9a6a91ffcc1ecb\AndroidManifest.xml:22:5-89
+MERGED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:37:5-132:19
+MERGED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:37:5-132:19
+MERGED from [cn.jiguang.sdk:jcore:1.2.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jcore-1.2.5.aar\bbd31a2439056d3e4b22dcac69a15a17\AndroidManifest.xml:11:5-12:19
+MERGED from [cn.jiguang.sdk:jcore:1.2.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jcore-1.2.5.aar\bbd31a2439056d3e4b22dcac69a15a17\AndroidManifest.xml:11:5-12:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\6037f61ff2704385381f0d2b8ae93a6d\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\6037f61ff2704385381f0d2b8ae93a6d\AndroidManifest.xml:22:5-23:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-gifdecoder-4.9.0.aar\466aa83b88a5cc735b84284548a16e67\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-gifdecoder-4.9.0.aar\466aa83b88a5cc735b84284548a16e67\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\constraintlayout-1.1.2.aar\46e296452561f67557a3e8fb7d9ccbad\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\constraintlayout-1.1.2.aar\46e296452561f67557a3e8fb7d9ccbad\AndroidManifest.xml:9:5-20
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\core-1.0.1.aar\6b17f8d533a0ca32ca9a6a91ffcc1ecb\AndroidManifest.xml:22:18-86
+	android:label
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:33:67-86
+	android:icon
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:33:87-121
+	android:usesCleartextTraffic
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:33:122-157
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:33:18-66
+activity#com.example.frontflutter.MainActivity
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:34:9-44:20
+	android:launchMode
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:34:48-78
+	android:hardwareAccelerated
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:34:246-280
+	android:windowSoftInputMode
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:34:281-323
+	android:configChanges
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:34:114-245
+	android:theme
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:34:79-113
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:34:19-47
+meta-data#io.flutter.app.android.SplashScreenUntilFirstFrame
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:39:13-113
+	android:value
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:39:90-110
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:39:24-89
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:40:13-43:29
+action#android.intent.action.MAIN
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:41:17-68
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:41:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:42:17-76
+	android:name
+		ADDED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml:42:27-74
+uses-sdk
+INJECTED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml
+INJECTED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml
+MERGED from [:multi_image_picker] D:\MyGit\frontflutter\build\multi_image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:multi_image_picker] D:\MyGit\frontflutter\build\multi_image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_image_compress] D:\MyGit\frontflutter\build\flutter_image_compress\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_image_compress] D:\MyGit\frontflutter\build\flutter_image_compress\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] D:\MyGit\frontflutter\build\sqflite\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:sqflite] D:\MyGit\frontflutter\build\sqflite\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:fake_alipay] D:\MyGit\frontflutter\build\fake_alipay\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:fake_alipay] D:\MyGit\frontflutter\build\fake_alipay\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_inappbrowser] D:\MyGit\frontflutter\build\flutter_inappbrowser\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:flutter_inappbrowser] D:\MyGit\frontflutter\build\flutter_inappbrowser\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:webview_flutter] D:\MyGit\frontflutter\build\webview_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:webview_flutter] D:\MyGit\frontflutter\build\webview_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:xs_progress_hud] D:\MyGit\frontflutter\build\xs_progress_hud\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:xs_progress_hud] D:\MyGit\frontflutter\build\xs_progress_hud\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] D:\MyGit\frontflutter\build\path_provider\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] D:\MyGit\frontflutter\build\path_provider\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler] D:\MyGit\frontflutter\build\permission_handler\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler] D:\MyGit\frontflutter\build\permission_handler\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] D:\MyGit\frontflutter\build\shared_preferences\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] D:\MyGit\frontflutter\build\shared_preferences\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:city_pickers] D:\MyGit\frontflutter\build\city_pickers\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:city_pickers] D:\MyGit\frontflutter\build\city_pickers\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:image_picker] D:\MyGit\frontflutter\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:image_picker] D:\MyGit\frontflutter\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:5:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\exifinterface-1.0.0.aar\6748f02970cae84ef6f64012e4b0f567\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\exifinterface-1.0.0.aar\6748f02970cae84ef6f64012e4b0f567\AndroidManifest.xml:20:5-44
+MERGED from [com.sangcomz:FishBun:0.9.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-FishBun-0.9.1.aar\4c7a3bd896e7e6cc499e7aee172da545\AndroidManifest.xml:7:5-9:41
+MERGED from [com.sangcomz:FishBun:0.9.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-FishBun-0.9.1.aar\4c7a3bd896e7e6cc499e7aee172da545\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-glide-4.9.0.aar\91d7a6ebf4fab33a8bb6fda15ac16f8f\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-glide-4.9.0.aar\91d7a6ebf4fab33a8bb6fda15ac16f8f\AndroidManifest.xml:6:5-8:41
+MERGED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:7:5-9:41
+MERGED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.webkit:webkit:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\webkit-1.0.0.aar\3f287b749dca4a5b23750e60e41f85c2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.webkit:webkit:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\webkit-1.0.0.aar\3f287b749dca4a5b23750e60e41f85c2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\browser-1.0.0.aar\6e4c5b16cd9bc8a18385ee89c589e3b0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\browser-1.0.0.aar\6e4c5b16cd9bc8a18385ee89c589e3b0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0-rc01] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\material-1.0.0-rc01.aar\d8bc09d0ebd245fb4e88dc61ec43686a\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0-rc01] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\material-1.0.0-rc01.aar\d8bc09d0ebd245fb4e88dc61ec43686a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0.aar\e6ef1e1e4bd2c2f5f0da93b9357ed11e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\appcompat-1.0.0.aar\e6ef1e1e4bd2c2f5f0da93b9357ed11e\AndroidManifest.xml:20:5-44
+MERGED from [io.github.v7lin:wechat-android:5.3.1+1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\wechat-android-5.3.1+1.aar\c16dfdb5e5812590b0871dcb8bcfb149\AndroidManifest.xml:7:5-9:41
+MERGED from [io.github.v7lin:wechat-android:5.3.1+1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\wechat-android-5.3.1+1.aar\c16dfdb5e5812590b0871dcb8bcfb149\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\0a86e42d9d4f7acda302727f9dc63b40\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\legacy-support-v4-1.0.0.aar\0a86e42d9d4f7acda302727f9dc63b40\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0-rc01] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\recyclerview-1.0.0-rc01.aar\a232bde60a185eaa0f27f86e002486bf\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0-rc01] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\recyclerview-1.0.0-rc01.aar\a232bde60a185eaa0f27f86e002486bf\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\def5cf57fe36e8fa15878db6f60792f7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\fragment-1.0.0.aar\def5cf57fe36e8fa15878db6f60792f7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0.aar\bfa352c1c76055e0daad1c50ef57fc1d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\vectordrawable-animated-1.0.0.aar\bfa352c1c76055e0daad1c50ef57fc1d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\98092529e1d7424050d52de666e969f1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\legacy-support-core-ui-1.0.0.aar\98092529e1d7424050d52de666e969f1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\bae0794d7a2405f454ed0bf2a0df74d7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\legacy-support-core-utils-1.0.0.aar\bae0794d7a2405f454ed0bf2a0df74d7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0.aar\d90010b1986e06549d770fcf00309921\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\vectordrawable-1.0.0.aar\d90010b1986e06549d770fcf00309921\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\f3a504d1889543c3218d42d25b4595cf\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\media-1.0.0.aar\f3a504d1889543c3218d42d25b4595cf\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0-rc01] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\transition-1.0.0-rc01.aar\39d248133a4a2b2bb1a0aa85de6bf74f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0-rc01] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\transition-1.0.0-rc01.aar\39d248133a4a2b2bb1a0aa85de6bf74f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\b387e1b9485ce10f64bb25d3ed007c15\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\viewpager-1.0.0.aar\b387e1b9485ce10f64bb25d3ed007c15\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\38ee9df04d0c75f652ceabd915c5fed4\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-1.0.0.aar\38ee9df04d0c75f652ceabd915c5fed4\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\328f257a5007816273e5473bc116e7dd\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\drawerlayout-1.0.0.aar\328f257a5007816273e5473bc116e7dd\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0.aar\3751c87412bb285a864d6653b9cc8488\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-1.0.0.aar\3751c87412bb285a864d6653b9cc8488\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\6ca583272c454516a37d50787cc3955c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\customview-1.0.0.aar\6ca583272c454516a37d50787cc3955c\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0.aar\17567430687d16d748fa0ec0f9e004ef\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-1.0.0.aar\17567430687d16d748fa0ec0f9e004ef\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\eca24e73a8028df43a1bcac902779229\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-1.0.0.aar\eca24e73a8028df43a1bcac902779229\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\6bf5c971cf62b1efc9ad4eb73d80b282\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\loader-1.0.0.aar\6bf5c971cf62b1efc9ad4eb73d80b282\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\core-1.0.1.aar\6b17f8d533a0ca32ca9a6a91ffcc1ecb\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\core-1.0.1.aar\6b17f8d533a0ca32ca9a6a91ffcc1ecb\AndroidManifest.xml:20:5-44
+MERGED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jcore:1.2.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jcore-1.2.5.aar\bbd31a2439056d3e4b22dcac69a15a17\AndroidManifest.xml:7:5-9:41
+MERGED from [cn.jiguang.sdk:jcore:1.2.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jcore-1.2.5.aar\bbd31a2439056d3e4b22dcac69a15a17\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\7a1c107a2a121c7b9479d66b06999860\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\interpolator-1.0.0.aar\7a1c107a2a121c7b9479d66b06999860\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\6037f61ff2704385381f0d2b8ae93a6d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\versionedparcelable-1.0.0.aar\6037f61ff2704385381f0d2b8ae93a6d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\3d58fc46038d71c88c29252e2013f0d9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\cursoradapter-1.0.0.aar\3d58fc46038d71c88c29252e2013f0d9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\0bf6b539b87970c4fdd0c209e32088f1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\lifecycle-runtime-2.0.0.aar\0bf6b539b87970c4fdd0c209e32088f1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0-rc01] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0-rc01.aar\e126ec5bca05425a98721342d847bff6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0-rc01] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\cardview-1.0.0-rc01.aar\e126ec5bca05425a98721342d847bff6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\5dd5a14db01e08afa79aa51741fe9a58\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\lifecycle-viewmodel-2.0.0.aar\5dd5a14db01e08afa79aa51741fe9a58\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\f2fd7c11e52c5d0d1733108415aa30f9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\documentfile-1.0.0.aar\f2fd7c11e52c5d0d1733108415aa30f9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\302142727ca846a7eb6242396075a5c6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-1.0.0.aar\302142727ca846a7eb6242396075a5c6\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\3d7400f17b6cd88415a71bf433106b8a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\print-1.0.0.aar\3d7400f17b6cd88415a71bf433106b8a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\83e02beae5215f91d1058cd7010bba64\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-2.0.0.aar\83e02beae5215f91d1058cd7010bba64\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\f91776b8e8f86817f93a567df005e79e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\lifecycle-livedata-core-2.0.0.aar\f91776b8e8f86817f93a567df005e79e\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\fd3f93a3bd2ed8c08d5a1045889b66ec\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\core-runtime-2.0.0.aar\fd3f93a3bd2ed8c08d5a1045889b66ec\AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-gifdecoder-4.9.0.aar\466aa83b88a5cc735b84284548a16e67\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-gifdecoder-4.9.0.aar\466aa83b88a5cc735b84284548a16e67\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\constraintlayout-1.1.2.aar\46e296452561f67557a3e8fb7d9ccbad\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.2] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\constraintlayout-1.1.2.aar\46e296452561f67557a3e8fb7d9ccbad\AndroidManifest.xml:5:5-7:41
+INJECTED from D:\MyGit\frontflutter\android\app\src\debug\AndroidManifest.xml
+INJECTED from D:\MyGit\frontflutter\android\app\src\debug\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\MyGit\frontflutter\android\app\src\debug\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\MyGit\frontflutter\android\app\src\main\AndroidManifest.xml
+		INJECTED from D:\MyGit\frontflutter\android\app\src\debug\AndroidManifest.xml
+activity#com.pichillilorenzo.flutter_inappbrowser.InAppBrowserActivity
+ADDED from [:flutter_inappbrowser] D:\MyGit\frontflutter\build\flutter_inappbrowser\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:10:9-13:47
+	android:configChanges
+		ADDED from [:flutter_inappbrowser] D:\MyGit\frontflutter\build\flutter_inappbrowser\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:12:13-59
+	android:theme
+		ADDED from [:flutter_inappbrowser] D:\MyGit\frontflutter\build\flutter_inappbrowser\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:13:13-44
+	android:name
+		ADDED from [:flutter_inappbrowser] D:\MyGit\frontflutter\build\flutter_inappbrowser\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:11:13-89
+activity#com.pichillilorenzo.flutter_inappbrowser.ChromeCustomTabs.ChromeCustomTabsActivity
+ADDED from [:flutter_inappbrowser] D:\MyGit\frontflutter\build\flutter_inappbrowser\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:14:9-17:55
+	android:configChanges
+		ADDED from [:flutter_inappbrowser] D:\MyGit\frontflutter\build\flutter_inappbrowser\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:16:13-59
+	android:theme
+		ADDED from [:flutter_inappbrowser] D:\MyGit\frontflutter\build\flutter_inappbrowser\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:17:13-52
+	android:name
+		ADDED from [:flutter_inappbrowser] D:\MyGit\frontflutter\build\flutter_inappbrowser\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:15:13-110
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:8:5-79
+MERGED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:12:5-79
+MERGED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:12:5-79
+MERGED from [io.github.v7lin:wechat-android:5.3.1+1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\wechat-android-5.3.1+1.aar\c16dfdb5e5812590b0871dcb8bcfb149\AndroidManifest.xml:12:5-79
+MERGED from [io.github.v7lin:wechat-android:5.3.1+1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\wechat-android-5.3.1+1.aar\c16dfdb5e5812590b0871dcb8bcfb149\AndroidManifest.xml:12:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:26:5-79
+MERGED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:26:5-79
+	android:name
+		ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:8:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:9:5-76
+MERGED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:13:5-76
+MERGED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:13:5-76
+MERGED from [io.github.v7lin:wechat-android:5.3.1+1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\wechat-android-5.3.1+1.aar\c16dfdb5e5812590b0871dcb8bcfb149\AndroidManifest.xml:13:5-76
+MERGED from [io.github.v7lin:wechat-android:5.3.1+1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\wechat-android-5.3.1+1.aar\c16dfdb5e5812590b0871dcb8bcfb149\AndroidManifest.xml:13:5-76
+MERGED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:27:5-76
+MERGED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:27:5-76
+	android:name
+		ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:9:22-73
+activity#io.github.v7lin.fakewechat.WechatCallbackActivity
+ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:14:9-17:67
+	android:launchMode
+		ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:16:13-43
+	android:theme
+		ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:17:13-64
+	android:name
+		ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:15:13-77
+activity-alias#${applicationId}.wxapi.WXPayEntryActivity
+ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:19:9-22:90
+	android:exported
+		ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:21:13-36
+	android:targetActivity
+		ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:22:13-87
+	android:name
+		ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:20:13-69
+activity-alias#com.look.yxb.wxapi.WXPayEntryActivity
+ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:19:9-22:90
+	android:exported
+		ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:21:13-36
+	android:targetActivity
+		ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:22:13-87
+	android:name
+		ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:20:13-69
+activity-alias#${applicationId}.wxapi.WXEntryActivity
+ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:23:9-26:90
+	android:exported
+		ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:25:13-36
+	android:targetActivity
+		ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:26:13-87
+	android:name
+		ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:24:13-66
+activity-alias#com.look.yxb.wxapi.WXEntryActivity
+ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:23:9-26:90
+	android:exported
+		ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:25:13-36
+	android:targetActivity
+		ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:26:13-87
+	android:name
+		ADDED from [:fake_wechat] D:\MyGit\frontflutter\build\fake_wechat\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:24:13-66
+provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
+ADDED from [:image_picker] D:\MyGit\frontflutter\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:11:9-19:20
+	android:grantUriPermissions
+		ADDED from [:image_picker] D:\MyGit\frontflutter\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:15:13-47
+	android:authorities
+		ADDED from [:image_picker] D:\MyGit\frontflutter\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:13:13-74
+	android:exported
+		ADDED from [:image_picker] D:\MyGit\frontflutter\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:14:13-37
+	android:name
+		ADDED from [:image_picker] D:\MyGit\frontflutter\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:12:13-82
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:image_picker] D:\MyGit\frontflutter\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:16:13-18:75
+	android:resource
+		ADDED from [:image_picker] D:\MyGit\frontflutter\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:18:17-72
+	android:name
+		ADDED from [:image_picker] D:\MyGit\frontflutter\build\image_picker\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:17:17-67
+receiver#com.jiguang.jpush.JPushPlugin$JPushReceiver
+ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:8:9-22:20
+	android:enabled
+		ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:10:13-35
+	android:exported
+		ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:9:13-71
+intent-filter#action:name:cn.jpush.android.intent.CONNECTION+action:name:cn.jpush.android.intent.MESSAGE_RECEIVED+action:name:cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION+action:name:cn.jpush.android.intent.NOTIFICATION_OPENED+action:name:cn.jpush.android.intent.NOTIFICATION_RECEIVED+action:name:cn.jpush.android.intent.REGISTRATION+category:name:${applicationId}
+ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:12:13-21:29
+intent-filter#action:name:cn.jpush.android.intent.CONNECTION+action:name:cn.jpush.android.intent.MESSAGE_RECEIVED+action:name:cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION+action:name:cn.jpush.android.intent.NOTIFICATION_OPENED+action:name:cn.jpush.android.intent.NOTIFICATION_RECEIVED+action:name:cn.jpush.android.intent.REGISTRATION+category:name:com.look.yxb
+ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:12:13-21:29
+action#cn.jpush.android.intent.REGISTRATION
+ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:13:17-79
+	android:name
+		ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:13:25-76
+action#cn.jpush.android.intent.MESSAGE_RECEIVED
+ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:14:17-83
+	android:name
+		ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:14:25-80
+action#cn.jpush.android.intent.NOTIFICATION_RECEIVED
+ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:15:17-88
+	android:name
+		ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:15:25-85
+action#cn.jpush.android.intent.NOTIFICATION_OPENED
+ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:16:17-86
+	android:name
+		ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:16:25-83
+action#cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION
+ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:17:17-92
+	android:name
+		ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:17:25-89
+action#cn.jpush.android.intent.CONNECTION
+ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:18:17-77
+	android:name
+		ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:18:25-74
+category#${applicationId}
+ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:20:17-61
+	android:name
+		ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:20:27-58
+category#com.look.yxb
+ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:20:17-61
+	android:name
+		ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:20:27-58
+receiver#com.jiguang.jpush.JPushEventReceiver
+ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:23:9-29:20
+	android:name
+		ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:23:19-70
+intent-filter#action:name:cn.jpush.android.intent.RECEIVE_MESSAGE+category:name:${applicationId}
+ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:24:13-28:29
+intent-filter#action:name:cn.jpush.android.intent.RECEIVE_MESSAGE+category:name:com.look.yxb
+ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:24:13-28:29
+action#cn.jpush.android.intent.RECEIVE_MESSAGE
+ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:25:17-82
+	android:name
+		ADDED from [:jpush_flutter] D:\MyGit\frontflutter\build\jpush_flutter\intermediates\merged_manifests\debug\processDebugManifest\merged\AndroidManifest.xml:25:25-79
+provider#com.sangcomz.fishbun.FishBunFileProvider
+ADDED from [com.sangcomz:FishBun:0.9.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-FishBun-0.9.1.aar\4c7a3bd896e7e6cc499e7aee172da545\AndroidManifest.xml:12:9-20:20
+	android:grantUriPermissions
+		ADDED from [com.sangcomz:FishBun:0.9.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-FishBun-0.9.1.aar\4c7a3bd896e7e6cc499e7aee172da545\AndroidManifest.xml:16:13-47
+	android:authorities
+		ADDED from [com.sangcomz:FishBun:0.9.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-FishBun-0.9.1.aar\4c7a3bd896e7e6cc499e7aee172da545\AndroidManifest.xml:14:13-60
+	android:exported
+		ADDED from [com.sangcomz:FishBun:0.9.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-FishBun-0.9.1.aar\4c7a3bd896e7e6cc499e7aee172da545\AndroidManifest.xml:15:13-37
+	android:name
+		ADDED from [com.sangcomz:FishBun:0.9.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-FishBun-0.9.1.aar\4c7a3bd896e7e6cc499e7aee172da545\AndroidManifest.xml:13:13-68
+activity#com.sangcomz.fishbun.ui.album.AlbumActivity
+ADDED from [com.sangcomz:FishBun:0.9.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-FishBun-0.9.1.aar\4c7a3bd896e7e6cc499e7aee172da545\AndroidManifest.xml:22:9-25:51
+	android:label
+		ADDED from [com.sangcomz:FishBun:0.9.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-FishBun-0.9.1.aar\4c7a3bd896e7e6cc499e7aee172da545\AndroidManifest.xml:24:13-42
+	android:theme
+		ADDED from [com.sangcomz:FishBun:0.9.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-FishBun-0.9.1.aar\4c7a3bd896e7e6cc499e7aee172da545\AndroidManifest.xml:25:13-48
+	android:name
+		ADDED from [com.sangcomz:FishBun:0.9.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-FishBun-0.9.1.aar\4c7a3bd896e7e6cc499e7aee172da545\AndroidManifest.xml:23:13-71
+activity#com.sangcomz.fishbun.ui.picker.PickerActivity
+ADDED from [com.sangcomz:FishBun:0.9.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-FishBun-0.9.1.aar\4c7a3bd896e7e6cc499e7aee172da545\AndroidManifest.xml:26:9-28:51
+	android:theme
+		ADDED from [com.sangcomz:FishBun:0.9.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-FishBun-0.9.1.aar\4c7a3bd896e7e6cc499e7aee172da545\AndroidManifest.xml:28:13-48
+	android:name
+		ADDED from [com.sangcomz:FishBun:0.9.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-FishBun-0.9.1.aar\4c7a3bd896e7e6cc499e7aee172da545\AndroidManifest.xml:27:13-73
+activity#com.sangcomz.fishbun.ui.detail.DetailActivity
+ADDED from [com.sangcomz:FishBun:0.9.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-FishBun-0.9.1.aar\4c7a3bd896e7e6cc499e7aee172da545\AndroidManifest.xml:29:9-31:54
+	android:theme
+		ADDED from [com.sangcomz:FishBun:0.9.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-FishBun-0.9.1.aar\4c7a3bd896e7e6cc499e7aee172da545\AndroidManifest.xml:31:13-51
+	android:name
+		ADDED from [com.sangcomz:FishBun:0.9.1] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-FishBun-0.9.1.aar\4c7a3bd896e7e6cc499e7aee172da545\AndroidManifest.xml:30:13-73
+activity#com.alipay.sdk.app.H5PayActivity
+ADDED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:18:9-24:20
+	android:screenOrientation
+		ADDED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:22:13-47
+	android:windowSoftInputMode
+		ADDED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:23:13-67
+	android:exported
+		ADDED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:21:13-37
+	android:configChanges
+		ADDED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:20:13-85
+	android:name
+		ADDED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:19:13-60
+activity#com.alipay.sdk.app.H5AuthActivity
+ADDED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:25:9-31:20
+	android:screenOrientation
+		ADDED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:29:13-47
+	android:windowSoftInputMode
+		ADDED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:30:13-67
+	android:exported
+		ADDED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:28:13-37
+	android:configChanges
+		ADDED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:27:13-74
+	android:name
+		ADDED from [io.github.v7lin:alipay-android:15.5.5] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jetified-alipay-android-15.5.5.aar\25c23389d2b2599b5081790136bd164e\AndroidManifest.xml:26:13-61
+permission#${JPUSH_PKGNAME}.permission.JPUSH_MESSAGE
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:11:5-13:47
+	android:protectionLevel
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:13:9-44
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:12:9-65
+permission#com.look.yxb.permission.JPUSH_MESSAGE
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:11:5-13:47
+	android:protectionLevel
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:13:9-44
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:12:9-65
+uses-permission#${JPUSH_PKGNAME}.permission.JPUSH_MESSAGE
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:16:5-81
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:16:22-78
+uses-permission#com.look.yxb.permission.JPUSH_MESSAGE
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:16:5-81
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:16:22-78
+uses-permission#android.permission.RECEIVE_USER_PRESENT
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:17:5-79
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:17:22-76
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:19:5-68
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:19:22-65
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:23:5-73
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:23:22-70
+uses-permission#android.permission.VIBRATE
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:24:5-66
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:24:22-63
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:25:5-84
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:25:22-81
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:30:5-78
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:30:22-75
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:32:5-76
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:32:22-73
+uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:34:5-89
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:34:22-86
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:35:5-79
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:35:22-76
+activity#cn.jpush.android.ui.PopWinActivity
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:40:9-43:52
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:42:13-37
+	android:theme
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:43:13-49
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:41:13-62
+activity#cn.jpush.android.ui.PushActivity
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:46:9-57:20
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:49:13-37
+	android:configChanges
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:48:13-63
+	android:theme
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:50:13-60
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:47:13-60
+intent-filter#action:name:cn.jpush.android.ui.PushActivity+category:name:${JPUSH_PKGNAME}+category:name:android.intent.category.DEFAULT
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:51:13-56:29
+intent-filter#action:name:cn.jpush.android.ui.PushActivity+category:name:android.intent.category.DEFAULT+category:name:com.look.yxb
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:51:13-56:29
+action#cn.jpush.android.ui.PushActivity
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:52:17-75
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:52:25-72
+category#android.intent.category.DEFAULT
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:54:17-76
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:54:27-73
+category#${JPUSH_PKGNAME}
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:55:17-61
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:55:27-58
+service#cn.jpush.android.service.PushService
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:60:9-71:19
+	android:process
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:64:13-40
+	android:enabled
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:62:13-35
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:63:13-37
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:61:13-64
+intent-filter#action:name:cn.jpush.android.intent.PUSH_TIME+action:name:cn.jpush.android.intent.PushService+action:name:cn.jpush.android.intent.REGISTER+action:name:cn.jpush.android.intent.REPORT
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:65:13-70:29
+action#cn.jpush.android.intent.REGISTER
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:66:17-75
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:66:25-72
+action#cn.jpush.android.intent.REPORT
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:67:17-73
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:67:25-70
+action#cn.jpush.android.intent.PushService
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:68:17-78
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:68:25-75
+action#cn.jpush.android.intent.PUSH_TIME
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:69:17-76
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:69:25-73
+service#cn.jpush.android.service.DaemonService
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:75:9-84:19
+	android:enabled
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:77:13-35
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:78:13-36
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:76:13-66
+intent-filter#action:name:cn.jpush.android.intent.DaemonService+category:name:${JPUSH_PKGNAME}
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:79:13-83:29
+intent-filter#action:name:cn.jpush.android.intent.DaemonService+category:name:com.look.yxb
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:79:13-83:29
+action#cn.jpush.android.intent.DaemonService
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:80:17-80
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:80:25-77
+receiver#cn.jpush.android.service.PushReceiver
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:87:9-106:20
+	android:enabled
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:89:13-35
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:90:13-37
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:88:13-65
+intent-filter#action:name:cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY+category:name:${JPUSH_PKGNAME}
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:91:13-94:29
+	android:priority
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:91:28-51
+intent-filter#action:name:cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY+category:name:com.look.yxb
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:91:13-94:29
+	android:priority
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:91:28-51
+action#cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:92:17-94
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:92:25-91
+intent-filter#action:name:android.intent.action.USER_PRESENT+action:name:android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:95:13-98:29
+action#android.intent.action.USER_PRESENT
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:96:17-77
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:96:25-74
+action#android.net.conn.CONNECTIVITY_CHANGE
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:97:17-79
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:97:25-76
+intent-filter#action:name:android.intent.action.PACKAGE_ADDED+action:name:android.intent.action.PACKAGE_REMOVED+data:scheme:package
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:100:13-105:29
+action#android.intent.action.PACKAGE_ADDED
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:101:17-78
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:101:25-75
+action#android.intent.action.PACKAGE_REMOVED
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:102:17-80
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:102:25-77
+data
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:104:17-50
+	android:scheme
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:104:23-47
+receiver#cn.jpush.android.service.AlarmReceiver
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:109:9-111:40
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:111:13-37
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:110:13-66
+provider#cn.jpush.android.service.DataProvider
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:113:9-117:43
+	android:process
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:117:13-40
+	android:authorities
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:115:13-64
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:116:13-37
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:114:13-65
+provider#cn.jpush.android.service.DownloadProvider
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:119:9-122:39
+	android:authorities
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:121:13-68
+	android:exported
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:122:13-36
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:120:13-69
+meta-data#JPUSH_CHANNEL
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:125:9-127:48
+	android:value
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:127:13-45
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:126:13-41
+meta-data#JPUSH_APPKEY
+ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:128:9-130:47
+	android:value
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:130:13-44
+	android:name
+		ADDED from [cn.jiguang.sdk:jpush:3.1.6] C:\Users\luke\.gradle\caches\transforms-1\files-1.1\jpush-3.1.6.aar\01c198a7084d5905c57d7ee87f69714b\AndroidManifest.xml:129:13-40

@@ -1,0 +1,1 @@
+export 'minePOS_page.dart';

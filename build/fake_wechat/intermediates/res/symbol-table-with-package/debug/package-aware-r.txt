@@ -1,0 +1,2 @@
+io.github.v7lin.fakewechat
+style fake_wechat_Theme_FakeWechat

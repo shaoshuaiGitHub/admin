@@ -1,0 +1,1 @@
+export 'detailList_page.dart';

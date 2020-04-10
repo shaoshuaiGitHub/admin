@@ -1,0 +1,65 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:1:1-26:12
+INJECTED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:1:1-26:12
+INJECTED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:1:1-26:12
+	package
+		ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:2:5-41
+		INJECTED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:4:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:5:5-79
+	android:name
+		ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:5:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:6:5-76
+	android:name
+		ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:6:22-73
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:7:5-75
+	android:name
+		ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:7:22-72
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:8:22-78
+application
+ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:10:5-25:19
+activity#io.github.v7lin.fakewechat.WechatCallbackActivity
+ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:11:9-14:67
+	android:launchMode
+		ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:13:13-43
+	android:theme
+		ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:14:13-64
+	android:name
+		ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:12:13-51
+activity-alias#${applicationId}.wxapi.WXEntryActivity
+ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:16:9-19:64
+	android:exported
+		ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:18:13-36
+	android:targetActivity
+		ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:19:13-61
+	android:name
+		ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:17:13-66
+activity-alias#${applicationId}.wxapi.WXPayEntryActivity
+ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:21:9-24:64
+	android:exported
+		ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:23:13-36
+	android:targetActivity
+		ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:24:13-61
+	android:name
+		ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml:22:13-69
+uses-sdk
+INJECTED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml
+INJECTED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml
+		ADDED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\luke\flutter\.pub-cache\hosted\pub.flutter-io.cn\fake_wechat-0.3.1\android\src\main\AndroidManifest.xml
